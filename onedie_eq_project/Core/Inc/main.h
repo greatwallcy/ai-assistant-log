@@ -105,9 +105,8 @@ extern "C" {
 #define BAL4_CTR2_PIN      GPIO_PIN_9  /* PE9 */
 #define BAL4_CTR3_PORT     GPIOE
 #define BAL4_CTR3_PIN      GPIO_PIN_7  /* PE7 */
-/* ⚠️ 引脚冲突: PB1 同时分配给 CTR_d4 和 SPI1_EN，需要硬件修正 */
 #define BAL4_CTR4_PORT     GPIOB
-#define BAL4_CTR4_PIN      GPIO_PIN_1  /* PB1 - 冲突!见注释 */
+#define BAL4_CTR4_PIN      GPIO_PIN_1  /* PB1 */
 
 /* ======================== 菊花链通讯1 (SPI1) ======================== */
 #define DC1_SPI            hspi1
@@ -117,9 +116,8 @@ extern "C" {
 #define DC1_MISO_PIN       GPIO_PIN_4  /* PB4 */
 #define DC1_SCK_PORT       GPIOB
 #define DC1_SCK_PIN        GPIO_PIN_3  /* PB3 */
-/* ⚠️ 引脚冲突: SPI1_EN 和 CTR_d4 共用 PB1 */
 #define DC1_EN_PORT        GPIOB
-#define DC1_EN_PIN         GPIO_PIN_1  /* PB1 - 冲突!见注释 */
+#define DC1_EN_PIN         GPIO_PIN_12 /* PB12 */
 
 /* ======================== 菊花链通讯2 (SPI2) ======================== */
 #define DC2_SPI            hspi2
