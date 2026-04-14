@@ -17,3 +17,5 @@
 - 每次会话的沟通记录保存在 `conversations/` 目录下，按日期命名
 - 生成的文档（报告、代码、方案等）保存在 `documents/` 目录下
 - 本仓库默认为私有，仅仓库所有者可访问
+- token：https://github.com/settings/tokens/
+- 每次对话都需要把沟通记录、生成的文件保存进来
