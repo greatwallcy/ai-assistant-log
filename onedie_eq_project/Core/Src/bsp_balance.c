@@ -36,9 +36,9 @@ typedef struct {
     SoftI2C_t *i2c;
     uint8_t ina226Addr;
     uint8_t tmp112Addr;
-} BalanceModule_t;
+} BalanceModuleCfg_t;
 
-static BalanceModule_t modules[4];
+static BalanceModuleCfg_t modules[4];
 
 /**
  * @brief  均衡模块初始化
