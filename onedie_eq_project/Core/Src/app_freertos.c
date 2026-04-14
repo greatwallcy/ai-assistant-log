@@ -46,5 +46,8 @@ void app_freertos_start(void)
     xTaskCreate(Task_IdleWatchdog,  "IDLE",      STACK_IDLE,       NULL, TASK_PRIO_IDLE,        &hTaskIdle);
 
     /* 启动调度器 (不应返回) */
+    /* 主动均衡启动自检任务 (高优先级, 先执行自检再挂起) */
+    xTaskCreate(Task_ActiveBalanceStartup, "AB_INIT", STACK_BALANCE, NULL, TASK_PRIO_BALANCE, NULL);
+
     vTaskStartScheduler();
 }
