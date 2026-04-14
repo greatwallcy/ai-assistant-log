@@ -174,7 +174,17 @@ static void MX_GPIO_Init(void)
     GPIO_InitStruct.Pin = BAL4_CTR1_PIN | BAL4_CTR2_PIN | BAL4_CTR3_PIN;
     HAL_GPIO_Init(BAL4_CTR1_PORT, &GPIO_InitStruct);
 
-    /* ⚠️ PB1 (CTR_d4 / SPI1_EN 冲突引脚) 暂不配置，待硬件修正后决定归属 */
+    /* ---- 均衡模块4 CTR_d4 (PB1) ---- */
+    GPIO_InitStruct.Pin = BAL4_CTR4_PIN;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(BAL4_CTR4_PORT, &GPIO_InitStruct);
+
+    /* ---- 菊花链1 EN (PB12) ---- */
+    HAL_GPIO_WritePin(DC1_EN_PORT, DC1_EN_PIN, GPIO_PIN_SET);  /* 默认不选中 */
+    GPIO_InitStruct.Pin = DC1_EN_PIN;
+    HAL_GPIO_Init(DC1_EN_PORT, &GPIO_InitStruct);
 
     /* ---- 菊花链2 EN (PD8) ---- */
     HAL_GPIO_WritePin(DC2_EN_PORT, DC2_EN_PIN, GPIO_PIN_SET);  /* 默认不选中 */
