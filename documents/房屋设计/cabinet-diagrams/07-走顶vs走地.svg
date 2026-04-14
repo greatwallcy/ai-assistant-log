@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 780" font-family="Arial, sans-serif">
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="#2C3E50">走顶 vs 走地 · 电路布线方式对比</text>
+
+  <!-- ====== LEFT: 走地 ====== -->
+  <text x="225" y="70" text-anchor="middle" font-size="18" font-weight="bold" fill="#E67E22">方案A：走地（地面布管）</text>
+  <text x="225" y="90" text-anchor="middle" font-size="11" fill="#95A5A6">常见做法 · 成本较低 · 需要地面开槽</text>
+
+  <!-- Room cross section -->
+  <rect x="40" y="110" width="370" height="380" rx="3" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1"/>
+
+  <!-- Ceiling -->
+  <rect x="40" y="110" width="370" height="30" fill="#D5D8DC"/>
+  <text x="225" y="130" text-anchor="middle" font-size="10" fill="#7F8C8D">天花板</text>
+
+  <!-- Walls -->
+  <rect x="40" y="110" width="25" height="380" fill="#E8D5B8"/>
+  <rect x="385" y="110" width="25" height="380" fill="#E8D5B8"/>
+  <text x="52" y="300" text-anchor="middle" font-size="9" fill="#A0764A" transform="rotate(-90,52,300)">承重墙</text>
+
+  <!-- Floor -->
+  <rect x="40" y="460" width="370" height="30" fill="#C49455"/>
+  <text x="225" y="480" text-anchor="middle" font-size="10" fill="#fff">地面找平层</text>
+
+  <!-- Wire pipes in floor -->
+  <line x1="65" y1="470" x2="400" y2="470" stroke="#E74C3C" stroke-width="6" opacity="0.6"/>
+  <line x1="65" y1="476" x2="400" y2="476" stroke="#3498DB" stroke-width="6" opacity="0.6"/>
+  <!-- Wire going up wall -->
+  <line x1="370" y1="470" x2="370" y2="200" stroke="#E74C3C" stroke-width="5" opacity="0.6"/>
+  <line x1="375" y1="476" x2="375" y2="300" stroke="#3498DB" stroke-width="5" opacity="0.6"/>
+
+  <!-- Ground groove -->
+  <rect x="100" y="455" width="280" height="10" rx="2" fill="#F5B041" opacity="0.3"/>
+  <text x="225" y="450" text-anchor="middle" font-size="9" fill="#D4AC0D">地面开槽（深30-40mm）</text>
+
+  <!-- Switch on wall -->
+  <rect x="362" y="190" width="16" height="30" rx="2" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="355" y="210" font-size="9" fill="#D4AC0D">开关</text>
+
+  <!-- Outlet on wall -->
+  <rect x="362" y="340" width="16" height="25" rx="2" fill="#E74C3C" stroke="#C0392B" stroke-width="1.5"/>
+  <text x="355" y="358" font-size="9" fill="#C0392B">插座</text>
+
+  <!-- Distribution box -->
+  <rect x="70" y="170" width="40" height="60" rx="3" fill="#2C3E50" stroke="#1A252F" stroke-width="2"/>
+  <text x="90" y="205" text-anchor="middle" font-size="8" fill="#fff">配电箱</text>
+  <line x1="110" y1="200" x2="370" y2="200" stroke="#E74C3C" stroke-width="4" opacity="0.4" stroke-dasharray="8,3"/>
+  <line x1="110" y1="205" x2="370" y2="350" stroke="#3498DB" stroke-width="4" opacity="0.4" stroke-dasharray="8,3"/>
+
+  <!-- Legend -->
+  <line x1="70" y1="420" x2="100" y2="420" stroke="#E74C3C" stroke-width="4"/>
+  <text x="105" y="424" font-size="10" fill="#E74C3C">强电管</text>
+  <line x1="70" y1="440" x2="100" y2="440" stroke="#3498DB" stroke-width="4"/>
+  <text x="105" y="444" font-size="10" fill="#3498DB">弱电管</text>
+
+  <!-- Pros/Cons -->
+  <rect x="40" y="510" width="370" height="75" rx="4" fill="#FEF9E7" stroke="#F9E79F" stroke-width="1"/>
+  <text x="55" y="530" font-size="11" fill="#27AE60" font-weight="bold">✅ 优点</text>
+  <text x="55" y="548" font-size="10" fill="#5D6D7E">• 成本低，开槽简单</text>
+  <text x="55" y="564" font-size="10" fill="#5D6D7E">• 不影响层高，无需吊顶</text>
+  <text x="55" y="580" font-size="10" fill="#5D6D7E">• 适合层高不足（&lt;2.7m）的户型</text>
+
+  <rect x="40" y="595" width="370" height="65" rx="4" fill="#FDEDEC" stroke="#F5B7B1" stroke-width="1"/>
+  <text x="55" y="615" font-size="11" fill="#E74C3C" font-weight="bold">❌ 缺点</text>
+  <text x="55" y="633" font-size="10" fill="#5D6D7E">• 维修需撬地砖，代价大</text>
+  <text x="55" y="649" font-size="10" fill="#5D6D7E">• 漏水不易发现</text>
+
+  <!-- ====== RIGHT: 走顶 ====== -->
+  <text x="675" y="70" text-anchor="middle" font-size="18" font-weight="bold" fill="#3498DB">方案B：走顶（吊顶内布管）⭐推荐</text>
+  <text x="675" y="90" text-anchor="middle" font-size="11" fill="#95A5A6">水电走顶 · 维修方便 · 需要吊顶配合</text>
+
+  <!-- Room cross section -->
+  <rect x="490" y="110" width="370" height="380" rx="3" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1"/>
+
+  <!-- Ceiling -->
+  <rect x="490" y="110" width="370" height="30" fill="#D5D8DC"/>
+  <text x="675" y="130" text-anchor="middle" font-size="10" fill="#7F8C8D">原天花板</text>
+
+  <!-- False ceiling / drop ceiling -->
+  <rect x="490" y="150" width="370" height="35" fill="#F0E6D6" stroke="#C49455" stroke-width="1.5"/>
+  <text x="675" y="172" text-anchor="middle" font-size="10" fill="#8B6338">吊顶层（龙骨+石膏板）</text>
+
+  <!-- Wires in ceiling -->
+  <line x1="510" y1="145" x2="840" y2="145" stroke="#E74C3C" stroke-width="6" opacity="0.6"/>
+  <line x1="510" y1="151" x2="840" y2="151" stroke="#3498DB" stroke-width="6" opacity="0.6"/>
+  <line x1="510" y1="157" x2="840" y2="157" stroke="#2ECC71" stroke-width="4" opacity="0.6"/>
+
+  <!-- Water pipe in ceiling -->
+  <line x1="510" y1="163" x2="840" y2="163" stroke="#F39C12" stroke-width="5" opacity="0.6"/>
+
+  <!-- Legend top -->
+  <text x="505" y="142" font-size="8" fill="#E74C3C">强电</text>
+  <text x="505" y="155" font-size="8" fill="#3498DB">弱电</text>
+  <text x="505" y="164" font-size="8" fill="#F39C12">水管</text>
+
+  <!-- Walls -->
+  <rect x="490" y="110" width="25" height="380" fill="#E8D5B8"/>
+  <rect x="835" y="110" width="25" height="380" fill="#E8D5B8"/>
+
+  <!-- Floor - no grooves! -->
+  <rect x="490" y="460" width="370" height="30" fill="#C49455"/>
+  <text x="675" y="480" text-anchor="middle" font-size="10" fill="#fff">地面（无需开槽）</text>
+
+  <!-- Wire going down wall -->
+  <line x1="820" y1="155" x2="820" y2="200" stroke="#E74C3C" stroke-width="5" opacity="0.6"/>
+  <line x1="825" y1="157" x2="825" y2="300" stroke="#3498DB" stroke-width="5" opacity="0.6"/>
+
+  <!-- Switch on wall -->
+  <rect x="812" y="190" width="16" height="30" rx="2" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="805" y="210" font-size="9" fill="#D4AC0D">开关</text>
+
+  <!-- Outlet on wall -->
+  <rect x="812" y="340" width="16" height="25" rx="2" fill="#E74C3C" stroke="#C0392B" stroke-width="1.5"/>
+  <text x="805" y="358" font-size="9" fill="#C0392B">插座</text>
+
+  <!-- Distribution box -->
+  <rect x="520" y="200" width="40" height="60" rx="3" fill="#2C3E50" stroke="#1A252F" stroke-width="2"/>
+  <text x="540" y="235" text-anchor="middle" font-size="8" fill="#fff">配电箱</text>
+  <line x1="560" y1="215" x2="820" y2="145" stroke="#E74C3C" stroke-width="3" opacity="0.4" stroke-dasharray="6,3"/>
+  <line x1="560" y1="225" x2="820" y2="157" stroke="#3498DB" stroke-width="3" opacity="0.4" stroke-dasharray="6,3"/>
+
+  <!-- Drop-down wire boxes -->
+  <rect x="600" y="186" width="20" height="50" rx="2" fill="none" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="610" y="250" text-anchor="middle" font-size="8" fill="#E74C3C">筒灯线</text>
+
+  <rect x="700" y="186" width="20" height="50" rx="2" fill="none" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="710" y="250" text-anchor="middle" font-size="8" fill="#E74C3C">主灯线</text>
+
+  <!-- Maintenance access -->
+  <rect x="640" y="150" width="70" height="35" rx="3" fill="#2ECC71" opacity="0.15" stroke="#2ECC71" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="675" y="172" text-anchor="middle" font-size="9" fill="#1E8449">检修口</text>
+
+  <!-- Water pipe indicator -->
+  <rect x="740" y="186" width="15" height="80" rx="2" fill="none" stroke="#F39C12" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="770" y="240" font-size="8" fill="#F39C12">水管下引</text>
+
+  <!-- Pros/Cons -->
+  <rect x="490" y="510" width="370" height="75" rx="4" fill="#EBF5FB" stroke="#AED6F1" stroke-width="1"/>
+  <text x="505" y="530" font-size="11" fill="#27AE60" font-weight="bold">✅ 优点</text>
+  <text x="505" y="548" font-size="10" fill="#5D6D7E">• 维修方便，不用撬砖（开吊顶即可）</text>
+  <text x="505" y="564" font-size="10" fill="#5D6D7E">• 漏水即时发现（滴到吊顶就知道）</text>
+  <text x="505" y="580" font-size="10" fill="#5D6D7E">• 地面完整性好，无裂缝风险</text>
+
+  <rect x="490" y="595" width="370" height="65" rx="4" fill="#FDEDEC" stroke="#F5B7B1" stroke-width="1"/>
+  <text x="505" y="615" font-size="11" fill="#E74C3C" font-weight="bold">❌ 缺点</text>
+  <text x="505" y="633" font-size="10" fill="#5D6D7E">• 需要吊顶配合，成本较高（吊顶约150元/㎡）</text>
+  <text x="505" y="649" font-size="10" fill="#5D6D7E">• 占用层高（吊顶下吊25-35cm）</text>
+
+  <!-- ====== Decision Guide ====== -->
+  <rect x="40" y="680" width="820" height="85" rx="5" fill="#EBF5FB" stroke="#AED6F1" stroke-width="1.5"/>
+  <text x="450" y="702" text-anchor="middle" font-size="15" font-weight="bold" fill="#2874A6">💡 120㎡ 自装建议</text>
+  <text x="55" y="722" font-size="11" fill="#2C3E50">🔸 <tspan font-weight="bold">水路：全部走顶</tspan>（漏水风险大，必须方便检修）</text>
+  <text x="55" y="742" font-size="11" fill="#2C3E50">🔸 <tspan font-weight="bold">电路：走地为主</tspan>（省钱），厨卫区域电路随水管走顶</text>
+  <text x="55" y="758" font-size="11" fill="#2C3E50">🔸 层高≥2.8m → 推荐全走顶 ｜ 层高&lt;2.7m → 走地（厨卫走顶）</text>
+</svg>
