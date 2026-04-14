@@ -154,6 +154,12 @@ extern "C" {
 #define FIRE_DETECT_PORT   GPIOD
 #define FIRE_DETECT_PIN    GPIO_PIN_2  /* PD2 - 消防检测 */
 
+/* ======================== 均衡模块5 (新增模拟I2C) ======================== */
+#define BAL5_SDA_PORT      GPIOB
+#define BAL5_SDA_PIN       GPIO_PIN_7  /* PB7 */
+#define BAL5_SCL_PORT      GPIOB
+#define BAL5_SCL_PIN       GPIO_PIN_6  /* PB6 */
+
 /* ======================== SWD 烧录口 ======================== */
 /* PA13 = SWDIO, PA14 = SWCLK, Pin14 = NRST */
 
