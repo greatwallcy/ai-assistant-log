@@ -22,6 +22,7 @@ QueueHandle_t xCanTxQueue = NULL;
 QueueHandle_t xCanRxQueue = NULL;
 QueueHandle_t xSpiMsgQueue = NULL;
 SemaphoreHandle_t xI2cMutex = NULL;
+SemaphoreHandle_t xUartMutex = NULL;
 
 /**
  * @brief  创建所有任务和资源，启动调度器
