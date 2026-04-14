@@ -28,11 +28,11 @@ void BSP_SoftI2C_Init(SoftI2C_t *i2c);
 HAL_StatusTypeDef BSP_SoftI2C_Write(SoftI2C_t *i2c, uint8_t addr, uint8_t *pData, uint16_t len);
 HAL_StatusTypeDef BSP_SoftI2C_Read(SoftI2C_t *i2c, uint8_t addr, uint8_t *pData, uint16_t len);
 
-/* 5个均衡模块的模拟I2C实例 */
+/* 4个均衡模块 + 1路铜排温度检测的模拟I2C实例 */
 extern SoftI2C_t softI2C_Module1;
 extern SoftI2C_t softI2C_Module2;
 extern SoftI2C_t softI2C_Module3;
 extern SoftI2C_t softI2C_Module4;
-extern SoftI2C_t softI2C_Module5;
+extern SoftI2C_t softI2C_CbTemp;     /* 铜排温度检测 (ADS1115) */
 
 #endif /* __BSP_I2C_H */
