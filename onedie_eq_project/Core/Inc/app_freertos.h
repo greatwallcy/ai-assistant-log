@@ -52,4 +52,7 @@ void Task_EepromManager(void *argument);
 void Task_FanControl(void *argument);
 void Task_IdleWatchdog(void *argument);
 
+/* ======================== 新增: 主动均衡启动自检 ======================== */
+void Task_ActiveBalanceStartup(void *argument);
+
 #endif /* __APP_FREERTOS_H */
