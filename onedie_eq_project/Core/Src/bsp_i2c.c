@@ -27,6 +27,10 @@ SoftI2C_t softI2C_Module4 = {
     .sdaPort = BAL4_SDA_PORT, .sdaPin = BAL4_SDA_PIN,
     .sclPort = BAL4_SCL_PORT, .sclPin = BAL4_SCL_PIN
 };
+SoftI2C_t softI2C_Module5 = {
+    .sdaPort = BAL5_SDA_PORT, .sdaPin = BAL5_SDA_PIN,
+    .sclPort = BAL5_SCL_PORT, .sclPin = BAL5_SCL_PIN
+};
 
 /* ======================== 硬件I2C ======================== */
 void BSP_I2C_Init(void)
