@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 780" font-family="Arial, sans-serif">
+  <!-- Title -->
+  <text x="440" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="#2C3E50">配电箱设计 · 120㎡ 家庭电路分配</text>
+  <text x="440" y="55" text-anchor="middle" font-size="12" fill="#7F8C8D">建议配置：总开关63A + 漏保分路 · 12-16回路</text>
+
+  <!-- ====== LEFT: Panel Layout ====== -->
+  <rect x="30" y="75" width="400" height="650" rx="5" fill="#2C3E50" stroke="#1A252F" stroke-width="3"/>
+  <text x="230" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">配电箱（PZ30箱）</text>
+  <text x="230" y="118" text-anchor="middle" font-size="10" fill="#95A5A6">建议 24 回路箱体（留余量）</text>
+
+  <!-- Row headers -->
+  <text x="60" y="148" font-size="10" fill="#F1C40F" font-weight="bold">回路</text>
+  <text x="165" y="148" font-size="10" fill="#F1C40F" font-weight="bold">开关类型</text>
+  <text x="265" y="148" font-size="10" fill="#F1C40F" font-weight="bold">电流</text>
+  <text x="315" y="148" font-size="10" fill="#F1C40F" font-weight="bold">线径</text>
+  <text x="365" y="148" font-size="10" fill="#F1C40F" font-weight="bold">线色</text>
+
+  <line x1="45" y1="155" x2="415" y2="155" stroke="#F1C40F" stroke-width="1"/>
+
+  <!-- Total switch -->
+  <rect x="45" y="162" width="370" height="35" rx="3" fill="#E74C3C" opacity="0.2" stroke="#E74C3C" stroke-width="1.5"/>
+  <text x="60" y="184" font-size="11" fill="#E74C3C" font-weight="bold">总开关</text>
+  <text x="165" y="184" font-size="10" fill="#E74C3C">2P 空开（不带漏保）</text>
+  <text x="265" y="184" font-size="10" fill="#E74C3C">63A</text>
+  <text x="315" y="184" font-size="10" fill="#E74C3C">10mm²</text>
+  <text x="365" y="184" font-size="10" fill="#E74C3C">—</text>
+
+  <!-- Circuit rows -->
+  <rect x="45" y="205" width="370" height="32" rx="2" fill="#F39C12" opacity="0.1" stroke="#F39C12" stroke-width="0.8"/>
+  <text x="60" y="225" font-size="10" fill="#F39C12" font-weight="bold">① 照明</text>
+  <text x="165" y="225" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="225" font-size="9" fill="#BDC3C7">16A</text>
+  <text x="315" y="225" font-size="9" fill="#BDC3C7">1.5/2.5mm²</text>
+  <text x="365" y="225" font-size="9" fill="#F39C12">红/黄</text>
+
+  <rect x="45" y="240" width="370" height="32" rx="2" fill="#3498DB" opacity="0.1" stroke="#3498DB" stroke-width="0.8"/>
+  <text x="60" y="260" font-size="10" fill="#3498DB" font-weight="bold">② 普通插座</text>
+  <text x="165" y="260" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="260" font-size="9" fill="#BDC3C7">20A</text>
+  <text x="315" y="260" font-size="9" fill="#BDC3C7">2.5mm²</text>
+  <text x="365" y="260" font-size="9" fill="#3498DB">蓝/黄</text>
+
+  <rect x="45" y="275" width="370" height="32" rx="2" fill="#3498DB" opacity="0.1" stroke="#3498DB" stroke-width="0.8"/>
+  <text x="60" y="295" font-size="10" fill="#3498DB" font-weight="bold">③ 普通插座</text>
+  <text x="165" y="295" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="295" font-size="9" fill="#BDC3C7">20A</text>
+  <text x="315" y="295" font-size="9" fill="#BDC3C7">2.5mm²</text>
+  <text x="365" y="295" font-size="9" fill="#3498DB">蓝/黄</text>
+
+  <rect x="45" y="310" width="370" height="32" rx="2" fill="#E67E22" opacity="0.15" stroke="#E67E22" stroke-width="0.8"/>
+  <text x="60" y="330" font-size="10" fill="#E67E22" font-weight="bold">④ 厨房</text>
+  <text x="165" y="330" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="330" font-size="9" fill="#BDC3C7">25A</text>
+  <text x="315" y="330" font-size="9" fill="#BDC3C7">4mm²</text>
+  <text x="365" y="330" font-size="9" fill="#E67E22">红/蓝</text>
+
+  <rect x="45" y="345" width="370" height="32" rx="2" fill="#E67E22" opacity="0.15" stroke="#E67E22" stroke-width="0.8"/>
+  <text x="60" y="365" font-size="10" fill="#E67E22" font-weight="bold">⑤ 冰箱（独立）</text>
+  <text x="165" y="365" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="365" font-size="9" fill="#BDC3C7">16A</text>
+  <text x="315" y="365" font-size="9" fill="#BDC3C7">2.5mm²</text>
+  <text x="365" y="365" font-size="9" fill="#E67E22">红/蓝</text>
+
+  <rect x="45" y="380" width="370" height="32" rx="2" fill="#1ABC9C" opacity="0.15" stroke="#1ABC9C" stroke-width="0.8"/>
+  <text x="60" y="400" font-size="10" fill="#1ABC9C" font-weight="bold">⑥ 卫生间</text>
+  <text x="165" y="400" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="400" font-size="9" fill="#BDC3C7">20A</text>
+  <text x="315" y="400" font-size="9" fill="#BDC3C7">4mm²</text>
+  <text x="365" y="400" font-size="9" fill="#1ABC9C">红/蓝</text>
+
+  <rect x="45" y="415" width="370" height="32" rx="2" fill="#9B59B6" opacity="0.15" stroke="#9B59B6" stroke-width="0.8"/>
+  <text x="60" y="435" font-size="10" fill="#9B59B6" font-weight="bold">⑦ 客厅空调</text>
+  <text x="165" y="435" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="435" font-size="9" fill="#BDC3C7">25A</text>
+  <text x="315" y="435" font-size="9" fill="#BDC3C7">4mm²</text>
+  <text x="365" y="435" font-size="9" fill="#9B59B6">红/蓝</text>
+
+  <rect x="45" y="450" width="370" height="32" rx="2" fill="#9B59B6" opacity="0.15" stroke="#9B59B6" stroke-width="0.8"/>
+  <text x="60" y="470" font-size="10" fill="#9B59B6" font-weight="bold">⑧ 主卧空调</text>
+  <text x="165" y="470" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="470" font-size="9" fill="#BDC3C7">20A</text>
+  <text x="315" y="470" font-size="9" fill="#BDC3C7">4mm²</text>
+  <text x="365" y="470" font-size="9" fill="#9B59B6">红/蓝</text>
+
+  <rect x="45" y="485" width="370" height="32" rx="2" fill="#9B59B6" opacity="0.15" stroke="#9B59B6" stroke-width="0.8"/>
+  <text x="60" y="505" font-size="10" fill="#9B59B6" font-weight="bold">⑨ 次卧空调</text>
+  <text x="165" y="505" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="505" font-size="9" fill="#BDC3C7">20A</text>
+  <text x="315" y="505" font-size="9" fill="#BDC3C7">4mm²</text>
+  <text x="365" y="505" font-size="9" fill="#9B59B6">红/蓝</text>
+
+  <rect x="45" y="520" width="370" height="32" rx="2" fill="#E74C3C" opacity="0.1" stroke="#E74C3C" stroke-width="0.8"/>
+  <text x="60" y="540" font-size="10" fill="#E74C3C" font-weight="bold">⑩ 电热水器</text>
+  <text x="165" y="540" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="540" font-size="9" fill="#BDC3C7">25A</text>
+  <text x="315" y="540" font-size="9" fill="#BDC3C7">4mm²</text>
+  <text x="365" y="540" font-size="9" fill="#E74C3C">红/蓝</text>
+
+  <rect x="45" y="555" width="370" height="32" rx="2" fill="#16A085" opacity="0.1" stroke="#16A085" stroke-width="0.8"/>
+  <text x="60" y="575" font-size="10" fill="#16A085" font-weight="bold">⑪ 阳台</text>
+  <text x="165" y="575" font-size="9" fill="#BDC3C7">1P+N 漏保</text>
+  <text x="265" y="575" font-size="9" fill="#BDC3C7">16A</text>
+  <text x="315" y="575" font-size="9" fill="#BDC3C7">2.5mm²</text>
+  <text x="365" y="575" font-size="9" fill="#16A085">红/蓝</text>
+
+  <rect x="45" y="590" width="370" height="32" rx="2" fill="#7F8C8D" opacity="0.1" stroke="#7F8C8D" stroke-width="0.8"/>
+  <text x="60" y="610" font-size="10" fill="#7F8C8D" font-weight="bold">⑫ 弱电（备用）</text>
+  <text x="165" y="610" font-size="9" fill="#BDC3C7">1P 空开</text>
+  <text x="265" y="610" font-size="9" fill="#BDC3C7">10A</text>
+  <text x="315" y="610" font-size="9" fill="#BDC3C7">—</text>
+  <text x="365" y="610" font-size="9" fill="#7F8C8D">—</text>
+
+  <!-- Spare rows indicator -->
+  <rect x="45" y="630" width="370" height="55" rx="2" fill="#F5F5F5" stroke="#BDC3C7" stroke-width="0.5" stroke-dasharray="4,2"/>
+  <text x="230" y="655" text-anchor="middle" font-size="10" fill="#BDC3C7">预留 4-6 个空位（未来扩展）</text>
+  <text x="230" y="672" text-anchor="middle" font-size="9" fill="#BDC3C7">智能设备/新电器/充电桩等</text>
+
+  <!-- ====== RIGHT: Wire Gauge Guide ====== -->
+  <rect x="455" y="75" width="405" height="310" rx="5" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="657" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#2C3E50">线径选择速查表</text>
+
+  <!-- Table -->
+  <rect x="470" y="110" width="375" height="28" rx="2" fill="#2C3E50"/>
+  <text x="495" y="128" font-size="10" fill="#fff" font-weight="bold">线径</text>
+  <text x="560" y="128" font-size="10" fill="#fff" font-weight="bold">最大电流</text>
+  <text x="640" y="128" font-size="10" fill="#fff" font-weight="bold">最大功率</text>
+  <text x="720" y="128" font-size="10" fill="#fff" font-weight="bold">适用</text>
+
+  <rect x="470" y="140" width="375" height="28" rx="1" fill="#EBF5FB"/>
+  <text x="495" y="158" font-size="10" fill="#2874A6" font-weight="bold">1.5mm²</text>
+  <text x="560" y="158" font-size="10" fill="#5D6D7E">10A</text>
+  <text x="640" y="158" font-size="10" fill="#5D6D7E">2200W</text>
+  <text x="720" y="158" font-size="10" fill="#5D6D7E">照明回路</text>
+
+  <rect x="470" y="170" width="375" height="28" rx="1" fill="#FEF9E7"/>
+  <text x="495" y="188" font-size="10" fill="#D4AC0D" font-weight="bold">2.5mm² ⭐</text>
+  <text x="560" y="188" font-size="10" fill="#5D6D7E">16-20A</text>
+  <text x="640" y="188" font-size="10" fill="#5D6D7E">3500-4400W</text>
+  <text x="720" y="188" font-size="10" fill="#5D6D7E">普通插座/冰箱</text>
+
+  <rect x="470" y="200" width="375" height="28" rx="1" fill="#FDEDEC"/>
+  <text x="495" y="218" font-size="10" fill="#E74C3C" font-weight="bold">4mm² ⭐</text>
+  <text x="560" y="218" font-size="10" fill="#5D6D7E">25-32A</text>
+  <text x="640" y="218" font-size="10" fill="#5D6D7E">5500-7000W</text>
+  <text x="720" y="218" font-size="10" fill="#5D6D7E">空调/厨房/热水器</text>
+
+  <rect x="470" y="230" width="375" height="28" rx="1" fill="#F5EEF8"/>
+  <text x="495" y="248" font-size="10" fill="#9B59B6" font-weight="bold">6mm²</text>
+  <text x="560" y="248" font-size="10" fill="#5D6D7E">40A</text>
+  <text x="640" y="248" font-size="10" fill="#5D6D7E">8800W</text>
+  <text x="720" y="248" font-size="10" fill="#5D6D7E">即热热水器/中央空调</text>
+
+  <rect x="470" y="260" width="375" height="28" rx="1" fill="#E8F8F5"/>
+  <text x="495" y="278" font-size="10" fill="#148F77" font-weight="bold">10mm²</text>
+  <text x="560" y="278" font-size="10" fill="#5D6D7E">60A</text>
+  <text x="640" y="278" font-size="10" fill="#5D6D7E">13200W</text>
+  <text x="720" y="278" font-size="10" fill="#5D6D7E">入户总线</text>
+
+  <!-- Key rule -->
+  <rect x="470" y="295" width="375" height="75" rx="4" fill="#FDEDEC" stroke="#F5B7B1" stroke-width="1"/>
+  <text x="485" y="315" font-size="11" fill="#E74C3C" font-weight="bold">⚡ 线径选择原则</text>
+  <text x="485" y="335" font-size="10" fill="#5D6D7E">1. 照明 1.5mm²（部分城市要求2.5）</text>
+  <text x="485" y="352" font-size="10" fill="#5D6D7E">2. 普通插座 2.5mm²</text>
+  <text x="485" y="365" font-size="10" fill="#5D6D7E">3. 空调/厨房/热水器 4mm²</text>
+
+  <!-- ====== Wire Color ====== -->
+  <rect x="455" y="400" width="405" height="130" rx="5" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="657" y="425" text-anchor="middle" font-size="15" font-weight="bold" fill="#2C3E50">电线颜色标准（必须遵守）</text>
+
+  <rect x="470" y="435" width="90" height="25" rx="3" fill="#E74C3C"/>
+  <text x="515" y="452" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">红色</text>
+  <text x="575" y="452" font-size="10" fill="#5D6D7E">= 火线（L）</text>
+
+  <rect x="470" y="465" width="90" height="25" rx="3" fill="#3498DB"/>
+  <text x="515" y="482" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">蓝色</text>
+  <text x="575" y="482" font-size="10" fill="#5D6D7E">= 零线（N）</text>
+
+  <rect x="470" y="495" width="90" height="25" rx="3" fill="#F1C40F"/>
+  <text x="515" y="512" text-anchor="middle" font-size="11" fill="#7D6608" font-weight="bold">黄绿双色</text>
+  <text x="575" y="512" font-size="10" fill="#5D6D7E">= 地线（PE）⚠️ 绝不能挪用</text>
+
+  <text x="485" y="526" font-size="9" fill="#95A5A6">⚠️ 禁止用其他颜色代替地线！三相五线制：红/黄/绿=ABC相 蓝=N 黄绿=PE</text>
+
+  <!-- ====== Tips ====== -->
+  <rect x="455" y="545" width="405" height="180" rx="5" fill="#FEF9E7" stroke="#F9E79F" stroke-width="1.5"/>
+  <text x="657" y="570" text-anchor="middle" font-size="15" font-weight="bold" fill="#7D6608">💡 配电箱设计要点</text>
+  <text x="470" y="592" font-size="10" fill="#5D6D7E">• 总开关不带漏保（避免一处漏电全屋断电）</text>
+  <text x="470" y="610" font-size="10" fill="#5D6D7E">• 每个分路带漏电保护（1P+N 漏保）</text>
+  <text x="470" y="628" font-size="10" fill="#5D6D7E">• 冰箱独立回路（出差不断电，防止食物变质）</text>
+  <text x="470" y="646" font-size="10" fill="#5D6D7E">• 空调柜机用 2P 空开，挂机用 1P+N</text>
+  <text x="470" y="664" font-size="10" fill="#5D6D7E">• 厨房/卫生间回路漏电动作电流 ≤30mA</text>
+  <text x="470" y="682" font-size="10" fill="#5D6D7E">• 箱体建议 24 位（留足够扩展空间）</text>
+  <text x="470" y="700" font-size="10" fill="#5D6D7E">• 品牌推荐：施耐德、ABB、正泰、德力西</text>
+  <text x="470" y="718" font-size="10" fill="#5D6D7E">• 入户线≥10mm²，配63A总开</text>
+</svg>
