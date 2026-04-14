@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#B8864E"/>
+    </linearGradient>
+    <linearGradient id="woodDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A0764A"/>
+      <stop offset="100%" stop-color="#8B6338"/>
+    </linearGradient>
+    <pattern id="shoes" width="20" height="10" patternUnits="userSpaceOnUse">
+      <rect width="20" height="10" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#2C3E50">入户玄关鞋柜 · 设计示意图</text>
+  <text x="400" y="65" text-anchor="middle" font-size="14" fill="#7F8C8D">总宽 1500mm × 深 380mm × 高 2400mm（顶天立地）</text>
+
+  <!-- Main Cabinet Frame -->
+  <rect x="100" y="90" width="600" height="760" rx="4" fill="#FAF3EB" stroke="#8B6338" stroke-width="3"/>
+
+  <!-- Section 1: Top Storage -->
+  <rect x="103" y="93" width="594" height="95" fill="url(#wood)" stroke="#7A5C30" stroke-width="1.5"/>
+  <text x="400" y="145" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">顶部储物区（换季杂物）</text>
+  <text x="400" y="165" text-anchor="middle" font-size="12" fill="#FFECD2">H = 450mm</text>
+
+  <!-- Divider -->
+  <line x1="350" y1="190" x2="350" y2="490" stroke="#8B6338" stroke-width="2.5"/>
+
+  <!-- Section 2: Hanging Area (left) -->
+  <rect x="103" y="190" width="245" height="300" fill="#FFF8F0" stroke="#8B6338" stroke-width="1.5"/>
+  <!-- Coat illustrations -->
+  <line x1="200" y1="210" x2="200" y2="460" stroke="#D4A574" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="200" cy="210" r="6" fill="#D4A574"/>
+  <!-- Coat shapes -->
+  <path d="M185,230 L200,215 L215,230 L220,380 L180,380 Z" fill="#E8B87A" stroke="#C49455" stroke-width="1" opacity="0.7"/>
+  <path d="M188,250 L200,238 L212,250 L215,360 L185,360 Z" fill="#A8C8E0" stroke="#7BA8C8" stroke-width="1" opacity="0.7"/>
+  <text x="225" y="280" font-size="13" fill="#8B6338" font-weight="bold">挂衣区</text>
+  <text x="225" y="300" font-size="11" fill="#A0764A">外套/背包</text>
+  <text x="225" y="318" font-size="11" fill="#A0764A">H=1200mm</text>
+
+  <!-- Section 2: Open shelf (right) -->
+  <rect x="352" y="190" width="345" height="150" fill="#FFF8F0" stroke="#8B6338" stroke-width="1.5"/>
+  <!-- Bag/decoration illustrations -->
+  <rect x="390" y="220" width="60" height="80" rx="5" fill="#E8D5B8" stroke="#C49455" stroke-width="1.5"/>
+  <rect x="470" y="240" width="50" height="60" rx="5" fill="#D5E8D4" stroke="#8CB88A" stroke-width="1.5"/>
+  <rect x="540" y="225" width="40" height="75" rx="5" fill="#D4C5E8" stroke="#9A88B8" stroke-width="1.5"/>
+  <rect x="600" y="250" width="55" height="50" rx="5" fill="#E8D4D4" stroke="#B88A8A" stroke-width="1.5"/>
+  <text x="530" y="210" font-size="13" fill="#8B6338" font-weight="bold">开放展示格</text>
+
+  <!-- Section 3: Shoe Bench (left bottom of hanging) -->
+  <rect x="103" y="492" width="245" height="100" fill="url(#woodDark)" stroke="#7A5C30" stroke-width="1.5"/>
+  <rect x="120" y="505" width="80" height="55" rx="8" fill="#C49455" opacity="0.5"/>
+  <text x="160" y="540" text-anchor="middle" font-size="12" fill="#fff">坐垫</text>
+  <text x="245" y="545" text-anchor="middle" font-size="12" fill="#FFECD2">换鞋凳</text>
+  <text x="245" y="565" text-anchor="middle" font-size="11" fill="#D4A574">H=450mm</text>
+
+  <!-- Section 3: Countertop (right) -->
+  <rect x="352" y="342" width="345" height="100" fill="url(#wood)" stroke="#7A5C30" stroke-width="1.5"/>
+  <!-- Items on counter -->
+  <ellipse cx="420" cy="385" rx="30" ry="15" fill="#95A5A6" opacity="0.5"/>
+  <text x="420" y="390" text-anchor="middle" font-size="10" fill="#fff">钥匙</text>
+  <rect x="500" y="365" width="50" height="35" rx="3" fill="#E67E22" opacity="0.4"/>
+  <text x="525" y="388" text-anchor="middle" font-size="10" fill="#fff">包</text>
+  <rect x="580" y="370" width="40" height="30" rx="3" fill="#3498DB" opacity="0.3"/>
+  <text x="600" y="390" text-anchor="middle" font-size="10" fill="#fff">快递</text>
+  <text x="530" y="420" text-anchor="middle" font-size="12" fill="#8B6338" font-weight="bold">台面（钥匙/包）H=900mm</text>
+
+  <!-- Section 4: Shoes area -->
+  <rect x="103" y="594" width="594" height="180" fill="#FFF8F0" stroke="#8B6338" stroke-width="1.5"/>
+  <!-- Adjustable shelves -->
+  <line x1="103" y1="654" x2="697" y2="654" stroke="#D4A574" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="103" y1="714" x2="697" y2="714" stroke="#D4A574" stroke-width="2" stroke-dasharray="8,4"/>
+  <!-- Shoe illustrations -->
+  <path d="M130,620 Q145,610 160,620 L155,635 Q145,640 135,635 Z" fill="#E74C3C" opacity="0.6"/>
+  <path d="M180,620 Q195,610 210,620 L205,635 Q195,640 185,635 Z" fill="#3498DB" opacity="0.6"/>
+  <path d="M230,620 Q245,610 260,620 L255,635 Q245,640 235,635 Z" fill="#2ECC71" opacity="0.6"/>
+  <path d="M280,620 Q295,610 310,620 L305,635 Q295,640 285,635 Z" fill="#9B59B6" opacity="0.6"/>
+
+  <path d="M130,680 Q145,670 160,680 L155,695 Q145,700 135,695 Z" fill="#F39C12" opacity="0.6"/>
+  <path d="M180,680 Q195,670 210,680 L205,695 Q195,700 185,695 Z" fill="#1ABC9C" opacity="0.6"/>
+  <path d="M230,680 Q245,670 260,680 L255,695 Q245,700 235,695 Z" fill="#E74C3C" opacity="0.6"/>
+  <path d="M280,680 Q295,670 310,680 L305,695 Q295,700 285,695 Z" fill="#3498DB" opacity="0.6"/>
+
+  <path d="M130,740 Q145,730 160,740 L155,755 Q145,760 135,755 Z" fill="#2ECC71" opacity="0.6"/>
+  <path d="M180,740 Q195,730 210,740 L205,755 Q195,700 185,755 Z" fill="#9B59B6" opacity="0.6"/>
+
+  <text x="550" y="640" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">鞋区（活动层板）</text>
+  <text x="550" y="660" text-anchor="middle" font-size="11" fill="#A0764A">常穿鞋区 / 换季鞋区</text>
+  <text x="550" y="680" text-anchor="middle" font-size="11" fill="#A0764A">32mm 系统孔可调</text>
+
+  <!-- Adjustable indicator arrows -->
+  <text x="680" y="650" font-size="18" fill="#E74C3C">↕</text>
+  <text x="680" y="710" font-size="18" fill="#E74C3C">↕</text>
+
+  <!-- Section 5: Bottom void -->
+  <rect x="103" y="776" width="594" height="72" fill="#F0E6D6" stroke="#8B6338" stroke-width="1.5"/>
+  <text x="400" y="815" text-anchor="middle" font-size="14" fill="#8B6338" font-weight="bold">底部悬空区 150-200mm</text>
+  <text x="400" y="835" text-anchor="middle" font-size="11" fill="#A0764A">常穿鞋 / 扫地机器人通行</text>
+
+  <!-- Dimension annotations -->
+  <!-- Left: total height -->
+  <line x1="70" y1="90" x2="70" y2="850" stroke="#E74C3C" stroke-width="1.5"/>
+  <polygon points="70,90 65,100 75,100" fill="#E74C3C"/>
+  <polygon points="70,850 65,840 75,840" fill="#E74C3C"/>
+  <text x="55" y="470" text-anchor="middle" font-size="12" fill="#E74C3C" transform="rotate(-90,55,470)">2400mm</text>
+
+  <!-- Bottom: total width -->
+  <line x1="100" y1="870" x2="700" y2="870" stroke="#E74C3C" stroke-width="1.5"/>
+  <polygon points="100,870 110,865 110,875" fill="#E74C3C"/>
+  <polygon points="700,870 690,865 690,875" fill="#E74C3C"/>
+  <text x="400" y="888" text-anchor="middle" font-size="12" fill="#E74C3C">1500mm</text>
+
+  <!-- LED strip indicator -->
+  <rect x="105" y="188" width="242" height="3" rx="1" fill="#F1C40F" opacity="0.8"/>
+  <rect x="354" y="339" width="341" height="3" rx="1" fill="#F1C40F" opacity="0.8"/>
+  <text x="70" y="197" font-size="10" fill="#F39C12">💡灯带</text>
+  <text x="70" y="347" font-size="10" fill="#F39C12">💡灯带</text>
+</svg>
