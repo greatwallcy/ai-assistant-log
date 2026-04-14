@@ -53,6 +53,9 @@ int main(void)
     BSP_CAN_Init();
     BSP_Balance_Init();
 
+    /* 铜排温度检测 I2C 初始化 (ADS1115) */
+    BSP_SoftI2C_Init(&softI2C_CbTemp);
+
     /* 启动 FreeRTOS 调度器 */
     app_freertos_start();
 
