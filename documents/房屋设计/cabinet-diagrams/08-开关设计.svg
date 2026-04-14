@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="Arial, sans-serif">
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="24" font-weight="bold" fill="#2C3E50">开关控制方式设计</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12" fill="#7F8C8D">单控 · 双控 · 三控 · 接线示意与适用场景</text>
+
+  <!-- ====== SINGLE SWITCH ====== -->
+  <rect x="30" y="75" width="270" height="300" rx="5" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="165" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#E67E22">① 单控开关</text>
+  <text x="165" y="118" text-anchor="middle" font-size="10" fill="#95A5A6">一个开关控制一盏灯</text>
+
+  <!-- Wiring diagram -->
+  <rect x="60" y="140" width="60" height="40" rx="5" fill="#2C3E50"/>
+  <text x="90" y="164" text-anchor="middle" font-size="10" fill="#fff">配电箱</text>
+  <rect x="60" y="160" width="25" height="20" rx="2" fill="#E74C3C" opacity="0.3"/>
+  <text x="72" y="174" text-anchor="middle" font-size="7" fill="#E74C3C">L</text>
+  <rect x="85" y="160" width="25" height="20" rx="2" fill="#3498DB" opacity="0.3"/>
+  <text x="97" y="174" text-anchor="middle" font-size="7" fill="#3498DB">N</text>
+
+  <!-- Switch -->
+  <rect x="170" y="190" width="50" height="80" rx="5" fill="#F1C40F" stroke="#D4AC0D" stroke-width="2"/>
+  <text x="195" y="220" text-anchor="middle" font-size="10" fill="#7D6608" font-weight="bold">单控</text>
+  <text x="195" y="236" text-anchor="middle" font-size="9" fill="#7D6608">L</text>
+  <rect x="180" y="240" width="30" height="10" rx="2" fill="#E74C3C" opacity="0.5"/>
+  <text x="195" y="249" text-anchor="middle" font-size="7" fill="#E74C3C">L1 (出)</text>
+
+  <!-- Light -->
+  <circle cx="195" y="320" r="25" fill="#F5F5DC" stroke="#D4AC0D" stroke-width="2"/>
+  <text x="195" y="325" text-anchor="middle" font-size="14">💡</text>
+
+  <!-- Wires -->
+  <line x1="120" y1="170" x2="170" y2="210" stroke="#E74C3C" stroke-width="2.5"/>
+  <line x1="195" y1="250" x2="195" y2="295" stroke="#E74C3C" stroke-width="2.5"/>
+  <line x1="120" y1="180" x2="195" y2="345" stroke="#3498DB" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Labels -->
+  <text x="135" y="188" font-size="8" fill="#E74C3C">火线L</text>
+  <text x="205" y="275" font-size="8" fill="#E74C3C">控制线</text>
+  <text x="125" y="348" font-size="8" fill="#3498DB">零线N</text>
+
+  <!-- Usage -->
+  <rect x="45" y="355" width="240" height="35" rx="3" fill="#FEF9E7" stroke="#F9E79F" stroke-width="1"/>
+  <text x="165" y="370" text-anchor="middle" font-size="10" fill="#7D6608">适用：厨房灯、阳台灯、卫生间灯</text>
+  <text x="165" y="383" text-anchor="middle" font-size="9" fill="#9A7D0A">单个入口就能控制的区域</text>
+
+  <!-- ====== DOUBLE SWITCH ====== -->
+  <rect x="315" y="75" width="270" height="300" rx="5" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="450" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#3498DB">② 双控开关 ⭐最常用</text>
+  <text x="450" y="118" text-anchor="middle" font-size="10" fill="#95A5A6">两个开关控制一盏灯</text>
+
+  <!-- Room layout -->
+  <rect x="345" y="135" width="210" height="120" rx="3" fill="#F5F5F5" stroke="#BDC3C7" stroke-width="1"/>
+  <text x="450" y="150" text-anchor="middle" font-size="9" fill="#BDC3C7">卧室</text>
+
+  <!-- Door switch -->
+  <rect x="355" y="170" width="35" height="50" rx="3" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="372" y="193" text-anchor="middle" font-size="8" fill="#7D6608" font-weight="bold">开关1</text>
+  <text x="372" y="208" text-anchor="middle" font-size="7" fill="#7D6608">门口</text>
+
+  <!-- Bed switch L -->
+  <rect x="395" y="195" width="35" height="50" rx="3" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="412" y="218" text-anchor="middle" font-size="8" fill="#7D6608" font-weight="bold">开关2</text>
+  <text x="412" y="233" text-anchor="middle" font-size="7" fill="#7D6608">床头左</text>
+
+  <!-- Bed switch R -->
+  <rect x="490" y="195" width="35" height="50" rx="3" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="507" y="218" text-anchor="middle" font-size="8" fill="#7D6608" font-weight="bold">开关2</text>
+  <text x="507" y="233" text-anchor="middle" font-size="7" fill="#7D6608">床头右</text>
+
+  <!-- Bed -->
+  <rect x="435" y="195" width="50" height="50" rx="3" fill="#D5E8D4" opacity="0.5" stroke="#8CB88A" stroke-width="1"/>
+  <text x="460" y="224" text-anchor="middle" font-size="10" fill="#8CB88A">🛏️</text>
+
+  <!-- Light -->
+  <circle cx="450" cy="145" r="12" fill="#F5F5DC" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="450" y="149" text-anchor="middle" font-size="10">💡</text>
+
+  <!-- Wires -->
+  <line x1="372" y1="220" x2="372" y2="257" stroke="#E74C3C" stroke-width="2"/>
+  <line x1="372" y1="257" x2="412" y2="245" stroke="#E67E22" stroke-width="2"/>
+  <line x1="412" y1="195" x2="412" y2="145" stroke="#E74C3C" stroke-width="2"/>
+  <line x1="372" y1="170" x2="372" y2="145" stroke="#E74C3C" stroke-width="2"/>
+  <line x1="372" y1="145" x2="450" y2="145" stroke="#E74C3C" stroke-width="2"/>
+
+  <!-- Wiring detail -->
+  <text x="450" y="270" text-anchor="middle" font-size="9" fill="#5D6D7E">双控接线：L→L1交叉→L</text>
+
+  <!-- Usage -->
+  <rect x="330" y="355" width="240" height="35" rx="3" fill="#EBF5FB" stroke="#AED6F1" stroke-width="1"/>
+  <text x="450" y="370" text-anchor="middle" font-size="10" fill="#2874A6">适用：卧室（门口+床头）、楼梯（上下）</text>
+  <text x="450" y="383" text-anchor="middle" font-size="9" fill="#5B7FA5">进门开灯，躺下关灯，不用起身</text>
+
+  <!-- ====== TRIPLE SWITCH ====== -->
+  <rect x="600" y="75" width="270" height="300" rx="5" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="735" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#9B59B6">③ 三控开关</text>
+  <text x="735" y="118" text-anchor="middle" font-size="10" fill="#95A5A6">三个开关控制一盏灯（需中途开关）</text>
+
+  <!-- Room layout -->
+  <rect x="625" y="135" width="220" height="130" rx="3" fill="#F5F5F5" stroke="#BDC3C7" stroke-width="1"/>
+  <text x="735" y="150" text-anchor="middle" font-size="9" fill="#BDC3C7">客厅 / 长走廊</text>
+
+  <!-- 3 switches -->
+  <rect x="635" y="165" width="35" height="45" rx="3" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="652" y="185" text-anchor="middle" font-size="7" fill="#7D6608">开关1</text>
+  <text x="652" y="198" text-anchor="middle" font-size="7" fill="#7D6608">入户</text>
+
+  <rect x="720" y="165" width="35" height="45" rx="3" fill="#9B59B6" stroke="#8E44AD" stroke-width="1.5"/>
+  <text x="737" y="185" text-anchor="middle" font-size="7" fill="#fff">中途</text>
+  <text x="737" y="198" text-anchor="middle" font-size="7" fill="#fff">开关</text>
+
+  <rect x="800" y="165" width="35" height="45" rx="3" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="817" y="185" text-anchor="middle" font-size="7" fill="#7D6608">开关3</text>
+  <text x="817" y="198" text-anchor="middle" font-size="7" fill="#7D6608">卧室</text>
+
+  <!-- Light -->
+  <circle cx="735" cy="145" r="12" fill="#F5F5DC" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="735" y="149" text-anchor="middle" font-size="10">💡</text>
+
+  <!-- Wires -->
+  <line x1="652" y1="165" x2="652" y2="145" stroke="#E74C3C" stroke-width="2"/>
+  <line x1="652" y1="145" x2="735" y2="145" stroke="#E74C3C" stroke-width="2"/>
+  <line x1="670" y1="210" x2="720" y2="210" stroke="#E67E22" stroke-width="2"/>
+  <line x1="755" y1="210" x2="800" y2="210" stroke="#E67E22" stroke-width="2"/>
+  <line x1="817" y1="165" x2="817" y2="145" stroke="#E74C3C" stroke-width="2"/>
+  <line x1="817" y1="145" x2="735" y2="145" stroke="#E74C3C" stroke-width="2"/>
+
+  <!-- Explanation -->
+  <text x="735" y="240" text-anchor="middle" font-size="9" fill="#5D6D7E">中途开关（6触点）= 换向开关</text>
+  <text x="735" y="255" text-anchor="middle" font-size="9" fill="#5D6D7E">任意位置拨动都能开关灯</text>
+
+  <!-- Usage -->
+  <rect x="615" y="355" width="255" height="35" rx="3" fill="#F5EEF8" stroke="#D7BDE2" stroke-width="1"/>
+  <text x="742" y="370" text-anchor="middle" font-size="10" fill="#7D3C98">适用：客厅（入户+走廊+阳台口）</text>
+  <text x="742" y="383" text-anchor="middle" font-size="9" fill="#A569BD">长走廊（两头+中间）</text>
+
+  <!-- ====== Smart Switch Alternative ====== -->
+  <rect x="30" y="410" width="840" height="105" rx="5" fill="#E8F8F5" stroke="#A3E4D7" stroke-width="1.5"/>
+  <text x="450" y="433" text-anchor="middle" font-size="15" font-weight="bold" fill="#148F77">④ 智能开关方案（替代三控/多控）</text>
+  <text x="50" y="455" font-size="11" fill="#148F77">无线智能开关（如小米/Aqara）可以零布线实现多控，替代传统的三控/四控布线：</text>
+  <text x="50" y="475" font-size="11" fill="#148F77">🔸 门口装一个有线智能开关（控制灯具回路）</text>
+  <text x="50" y="495" font-size="11" fill="#148F77">🔸 床头/走廊贴一个无线开关（贴墙安装，电池供电，通过 Zigbee/WiFi 联动）</text>
+  <text x="50" y="510" font-size="11" fill="#148F77">🔸 优点：不用多布线、位置灵活、可语音/手机控制 ｜ 缺点：需要智能家居网关、依赖网络</text>
+
+  <!-- ====== Material & Brand ====== -->
+  <rect x="30" y="530" width="840" height="175" rx="5" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="450" y="555" text-anchor="middle" font-size="15" font-weight="bold" fill="#2C3E50">开关面板选型与品牌推荐</text>
+
+  <!-- Switch types -->
+  <rect x="45" y="565" width="250" height="125" rx="4" fill="#FEF9E7" stroke="#F9E79F" stroke-width="1"/>
+  <text x="170" y="585" text-anchor="middle" font-size="12" font-weight="bold" fill="#7D6608">开关类型</text>
+  <text x="55" y="605" font-size="10" fill="#5D6D7E">• 大翘板开关（最常用，手感好）</text>
+  <text x="55" y="622" font-size="10" fill="#5D6D7E">• 触摸开关（颜值高，可智能联动）</text>
+  <text x="55" y="639" font-size="10" fill="#5D6D7E">• 调光开关（需要配合调光灯）</text>
+  <text x="55" y="656" font-size="10" fill="#5D6D7E">• 声光控开关（走廊/楼道感应灯）</text>
+  <text x="55" y="673" font-size="10" fill="#5D6D7E">• 带荧光/LED指示（夜间找开关）</text>
+
+  <!-- Brands -->
+  <rect x="310" y="565" width="275" height="125" rx="4" fill="#EBF5FB" stroke="#AED6F1" stroke-width="1"/>
+  <text x="447" y="585" text-anchor="middle" font-size="12" font-weight="bold" fill="#2874A6">品牌推荐</text>
+  <text x="320" y="605" font-size="10" fill="#27AE60">⭐ 高端：西门子、罗格朗、施耐德</text>
+  <text x="320" y="622" font-size="10" fill="#2874A6">⭐ 中高端：ABB、松下、公牛G系列</text>
+  <text x="320" y="639" font-size="10" fill="#E67E22">⭐ 性价比：德力西、正泰、公牛</text>
+  <text x="320" y="656" font-size="10" fill="#9B59B6">⭐ 智能：小米/Aqara、绿米、欧瑞博</text>
+  <text x="320" y="673" font-size="10" fill="#95A5A6">120㎡推荐：公牛/德力西（预算）或西门子/ABB（品质）</text>
+
+  <!-- Socket types -->
+  <rect x="600" y="565" width="255" height="125" rx="4" fill="#FDEDEC" stroke="#F5B7B1" stroke-width="1"/>
+  <text x="727" y="585" text-anchor="middle" font-size="12" font-weight="bold" fill="#C0392B">插座选型要点</text>
+  <text x="610" y="605" font-size="10" fill="#5D6D7E">• 五孔插座选大间距（二三插不打架）</text>
+  <text x="610" y="622" font-size="10" fill="#5D6D7E">• 厨房用带独立开关的插座</text>
+  <text x="610" y="639" font-size="10" fill="#5D6D7E">• 卫生间用带防溅盒的插座</text>
+  <text x="610" y="656" font-size="10" fill="#5D6D7E">• USB插座选PD快充（20W+）</text>
+  <text x="610" y="673" font-size="10" fill="#5D6D7E">• 地插：餐桌/茶几下方备用</text>
+</svg>
