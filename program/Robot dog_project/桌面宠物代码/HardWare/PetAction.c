@@ -801,7 +801,8 @@ void music_shuffle_play(void)//随机播放（Action_Mode=21）
     // 仅当Action_Mode匹配且允许发送时，执行一次发送
     if(Action_Mode == 21 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_SHUFFLE_PLAY);  // 拷贝下一曲指令
+				Serial_SetMP3Cmd(MP3_SHUFFLE_PLAY);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  // 拷贝下一曲指令
  //       Serial_SendMP3Cmd();              // 中断保护发送
         ci_fuzhi = 0;         // 禁止重复发送
         Action_Mode = 2;      // 发送完成后重置Action_Mode
@@ -817,7 +818,8 @@ void music_one_cycle_stop(void)//单曲循环--结束
     }
     if(Action_Mode == 22 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_ONE_CYCLE_STOP);  
+				Serial_SetMP3Cmd(MP3_ONE_CYCLE_STOP);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
    //     Serial_SendMP3Cmd();              // 中断保护发送
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -833,7 +835,8 @@ void music_one_cycle_start(void)//单曲循环--开始
     }
     if(Action_Mode == 23 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_ONE_CYCLE_START);  
+        Serial_SetMP3Cmd(MP3_ONE_CYCLE_START);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();  
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -850,7 +853,8 @@ void music_type_cycle_start(void)//类型循环开始（Action_Mode=24）
     }
     if(Action_Mode == 24 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_TYPE_CYCLE_START);  
+				Serial_SetMP3Cmd(MP3_TYPE_CYCLE_START);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();  
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -867,7 +871,8 @@ void music_type_cycle_stop(void)//类型循环结束（Action_Mode=25）
     }
     if(Action_Mode == 25 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_TYPE_CYCLE_STOP);  
+        Serial_SetMP3Cmd(MP3_TYPE_CYCLE_STOP);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();  
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -883,7 +888,8 @@ void music_next_song(void)//下一曲
     }
     if(Action_Mode == 26 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_NEXT_SONG);  
+				Serial_SetMP3Cmd(MP3_NEXT_SONG);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();  
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -899,7 +905,8 @@ void music_last_song(void)//上一曲
     }
     if(Action_Mode == 27 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_LAST_SONG);  
+				Serial_SetMP3Cmd(MP3_LAST_SONG);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -915,7 +922,8 @@ void music_volume_set_80(void)//音量设置为80
     }
     if(Action_Mode == 28 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_VOLUME_SET_80);  
+				Serial_SetMP3Cmd(MP3_VOLUME_SET_80);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
  //       Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -932,7 +940,7 @@ void music_volume_set_60(void)//音量设置为60
     if(Action_Mode == 29 && ci_fuzhi == 1)
     {
 				Serial_SetMP3Cmd(MP3_VOLUME_SET_60);  
-//        Serial_SendMP3CmdToQueue();
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送
         ci_fuzhi = 0;
         Action_Mode = 2;
     }
@@ -947,7 +955,8 @@ void music_stop_play(void)//停止播放
     }
     if(Action_Mode == 30 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_STOP_PLAY);  
+        Serial_SetMP3Cmd(MP3_STOP_PLAY);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -963,7 +972,8 @@ void music_start_play(void)//播放
     }
     if(Action_Mode == 31 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_START_PLAY);  // 拷贝播放指令
+        Serial_SetMP3Cmd(MP3_START_PLAY);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  // 拷贝播放指令
   //      Serial_SendMP3Cmd();              // 中断保护发送
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -979,7 +989,8 @@ void music_pause_play(void)//暂停
     }
     if(Action_Mode == 32 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_PAUSE_PLAY);  // 拷贝暂停指令
+				Serial_SetMP3Cmd(MP3_PAUSE_PLAY);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  // 拷贝暂停指令
   //      Serial_SendMP3Cmd();              // 中断保护发送
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -995,7 +1006,8 @@ void music_all_cycle_start(void)//全部循环--开始
     }
     if(Action_Mode == 33 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_ALL_CYCLE_START);  
+        Serial_SetMP3Cmd(MP3_ALL_CYCLE_START);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //     Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -1011,7 +1023,8 @@ void music_all_cycle_stop(void)//全部循环--结束
     }
     if(Action_Mode == 34 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_ALL_CYCLE_STOP);  
+        Serial_SetMP3Cmd(MP3_ALL_CYCLE_STOP);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -1027,7 +1040,8 @@ void music_play_music(void)//普通音乐播放
     }
     if(Action_Mode == 35 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_PLAY_MUSIC);  
+        Serial_SetMP3Cmd(MP3_PLAY_MUSIC);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -1043,7 +1057,8 @@ void music_play_art(void)//戏曲播放
     }
     if(Action_Mode == 36 && ci_fuzhi == 1)
     {
-        Serial_SetMP3Cmd(MP3_PLAY_ART);  
+        Serial_SetMP3Cmd(MP3_PLAY_ART);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
  //       Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -1073,7 +1088,8 @@ void music_volume_set_40(void)//音量设置为40
     }
     if(Action_Mode == 38 && ci_fuzhi == 1)
     {
-				Serial_SetMP3Cmd(MP3_VOLUME_SET_40);  
+				Serial_SetMP3Cmd(MP3_VOLUME_SET_40);
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送  
   //      Serial_SendMP3Cmd();
         ci_fuzhi = 0;
         Action_Mode = 2;
@@ -1090,7 +1106,7 @@ void music_volume_set_20(void)//音量设置为20
     if(Action_Mode == 39 && ci_fuzhi == 1)
     {
 				Serial_SetMP3Cmd(MP3_VOLUME_SET_20);  
-//        Serial_SendMP3CmdToQueue();
+        Serial_SendMP3CmdToQueue();           // ★修复：入队发送
         ci_fuzhi = 0;
         Action_Mode = 2;
     }
