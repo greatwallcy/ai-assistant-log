@@ -2,32 +2,32 @@
 #define __SERIAL_H
 
 #include <stdio.h>
-#include "stm32f10x.h"  // ±ØĞë°üº¬£¬·ñÔò½á¹¹ÌåÖĞµÄuint8_tÎŞ·¨Ê¶±ğ
+#include "stm32f10x.h"
 
-// 1. ĞŞÕı£ºMP3Ö¸Áî¹Ì¶¨Îª9×Ö½Ú£¬FRAME_LENGTH=9
-#define QUEUE_SIZE    144       // ¶ÓÁĞ×Ü×Ö½ÚÊı£¨16Ö¡¡Á9×Ö½Ú£¬×ã¹»»º´æ16ÌõÖ¸Áî£©
-#define FRAME_LENGTH  8        // ĞŞÕı£ºMP3Ö¸Áî³¤¶È=9×Ö½Ú£¨º¬Ğ£ÑéºÍ£©
+// MP3æŒ‡ä»¤å›ºå®šä¸º8å­—èŠ‚ï¼ŒFRAME_LENGTH=8
+#define QUEUE_SIZE    144       // é˜Ÿåˆ—ç¼“å†²åŒºå­—èŠ‚æ•°(18å¸§x8å­—èŠ‚,è¶³å¤Ÿç¼“å­˜18æ¡æŒ‡ä»¤)
+#define FRAME_LENGTH  8         // æ¯æ¡MP3æŒ‡ä»¤é•¿åº¦=8å­—èŠ‚(å«æ ¡éªŒ)
 
-// 2. ¶ÓÁĞ½á¹¹Ìå¶¨Òå£¨²»±ä£©
+// é˜Ÿåˆ—ç»“æ„ä½“å®šä¹‰ï¼ˆç¯å½¢ï¼‰
 typedef struct {
-    uint8_t buffer[QUEUE_SIZE];  // »º³åÇø
-    uint16_t front;              // ¶ÓÍ·Ë÷Òı
-    uint16_t rear;               // ¶ÓÎ²Ë÷Òı
-    uint16_t count;              // µ±Ç°×Ö½ÚÊı
+    uint8_t buffer[QUEUE_SIZE];  // é˜Ÿåˆ—ç¼“å†²åŒº
+    uint16_t front;              // é˜Ÿå¤´æŒ‡é’ˆ
+    uint16_t rear;               // é˜Ÿå°¾æŒ‡é’ˆ
+    uint16_t count;              // å½“å‰å­—èŠ‚æ•°
 } SerialQueue;
 
-// 3. ÉùÃ÷È«¾Ö¶ÓÁĞºÍº¯Êı£¨¹Ø¼ü£º²¹È«ËùÓĞ¶ÓÁĞ²Ù×÷º¯ÊıµÄÉùÃ÷£©
+// å…¨å±€é˜Ÿåˆ—å’Œå‡½æ•°å£°æ˜
 extern SerialQueue uart2Queue;
-extern uint8_t Serial_TxPacket[FRAME_LENGTH];  // ĞŞÕı£ºÊı×é³¤¶È=FRAME_LENGTH=9
+extern uint8_t Serial_TxPacket[FRAME_LENGTH];  // å‘é€ç¼“å­˜æ•°ç»„
 extern uint8_t Serial_RxPacket[8];
 
-// ²¹È«¶ÓÁĞ²Ù×÷º¯ÊıÉùÃ÷£¨Ö®Ç°È±Ê§£¬µ¼ÖÂº¯Êıµ÷ÓÃÊ§°Ü£©
+// é˜Ÿåˆ—æ“ä½œå‡½æ•°
 void Serial_QueueInit(SerialQueue *q);
 uint8_t Serial_Enqueue(SerialQueue *q, const uint8_t *data, uint16_t len);
 uint8_t Serial_Dequeue(SerialQueue *q, uint8_t *data, uint16_t len);
 uint8_t Serial_QueueIsEmpty(SerialQueue *q);
 
-// ÆäËûº¯ÊıÉùÃ÷£¨²»±ä£©
+// ä¸²å£å‡½æ•°
 void Serial_Init(void);
 void Serial_SendByte(uint8_t Byte);
 void Serial_SendArray(uint8_t *Array, uint16_t Length);

@@ -932,7 +932,7 @@ void music_volume_set_60(void)//音量设置为60
     if(Action_Mode == 29 && ci_fuzhi == 1)
     {
 				Serial_SetMP3Cmd(MP3_VOLUME_SET_60);  
-//        Serial_SendMP3Cmd();
+//        Serial_SendMP3CmdToQueue();
         ci_fuzhi = 0;
         Action_Mode = 2;
     }
@@ -1090,7 +1090,7 @@ void music_volume_set_20(void)//音量设置为20
     if(Action_Mode == 39 && ci_fuzhi == 1)
     {
 				Serial_SetMP3Cmd(MP3_VOLUME_SET_20);  
-//        Serial_SendMP3Cmd();
+//        Serial_SendMP3CmdToQueue();
         ci_fuzhi = 0;
         Action_Mode = 2;
     }

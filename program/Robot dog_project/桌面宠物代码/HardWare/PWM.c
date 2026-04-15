@@ -85,7 +85,7 @@ void PWM_SetCompare4(uint16_t Compare)
 
 void PWM_WSetCompare(uint16_t Compare)
 {
-	TIM_SetCompare1(TddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddzzzzIM2, Compare);//设置尾巴CCR1的值
+	TIM_SetCompare1(TIM2, Compare); //修复：删除垃圾字符//设置尾巴CCR1的值
 }
 
 //void PWM_LED1(uint16_t Compare)

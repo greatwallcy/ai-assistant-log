@@ -8,7 +8,6 @@
 #include "PWM.h"
 #include "Serial.h"
 
-//增加队列程序调试，通讯成功
 
 
 /***************************************************************************************
@@ -85,12 +84,7 @@ int main(void)
 		else if(Action_Mode==39){music_volume_set_20();}//儿歌播放
 
 
-		//增加队列程序调试，通讯成功
-				Serial_SetMP3Cmd(56);  // 拷贝指令到缓存
-        Serial_SendMP3CmdToQueue();           // 指令入队（核心修改）
 				 // 2. 关键：触发出队和发送（必须调用，否则数据在队列中不发送）
-        Serial_ProcessQueue();
-				Delay_ms (1000);
 
    
 		
@@ -143,7 +137,6 @@ int main(void)
 
 ////放下
 
-//				Delay_ms (1000);
 
 
 
