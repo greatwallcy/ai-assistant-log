@@ -1,5 +1,4 @@
-# WEB folder (embedded git repo)
-WEB/
+# WEB folder - keep as regular folder
 
 # Android build artifacts
 program/walle_project/walle-android/app/build/
