@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我们的故事</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg1: #1a1a2e; --bg2: #16213e; --bg3: #0f3460;
+  --text: #fff; --accent: #e0c3fc;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.1);
+}
+body {
+  background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 50%, var(--bg3) 100%);
+  min-height: 100vh;
+  font-family: 'PingFang SC','Microsoft YaHei',sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ====== 高铁票样式 ====== */
+.train-ticket {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+.tt-start, .tt-end {
+  padding: 18px 28px;
+  text-align: center;
+  min-width: 130px;
+}
+.tt-start {
+  background: rgba(224,195,252,0.08);
+  border-right: 1px dashed rgba(255,255,255,0.15);
+}
+.tt-end {
+  background: rgba(224,195,252,0.08);
+  border-left: 1px dashed rgba(255,255,255,0.15);
+}
+.tt-mid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  gap: 4px;
+}
+.tt-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 3px;
+  margin-bottom: 4px;
+}
+.tt-station {
+  font-size: 1.05rem;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.tt-train-num {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(224,195,252,0.5);
+}
+.tt-arrow {
+  font-size: 1.8rem;
+  color: rgba(255,255,255,0.5);
+}
+.tt-date {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 2px;
+}
+
+/* ====== 封面 ====== */
+#page-cover {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 100vh; text-align: center;
+  position: relative; z-index: 1;
+}
+.cover-title {
+  font-size: 2.6rem; font-weight: 300;
+  letter-spacing: 10px; color: rgba(255,255,255,0.95);
+  text-shadow: 0 0 30px rgba(255,255,255,0.2);
+  margin-bottom: 28px;
+}
+.together-info {
+  font-size: 2.8rem; font-weight: 200;
+  letter-spacing: 6px; color: var(--accent);
+  text-shadow: 0 0 40px rgba(224,195,252,0.5);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.together-days {
+  font-size: 1.1rem; color: rgba(255,255,255,0.6);
+  letter-spacing: 3px; margin-bottom: 40px;
+}
+.start-btn {
+  display: inline-block; padding: 15px 55px;
+  font-size: 1.15rem; letter-spacing: 8px;
+  color: #fff; border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50px; background: rgba(255,255,255,0.06);
+  cursor: pointer; transition: all 0.4s;
+  backdrop-filter: blur(10px);
+  text-decoration: none; animation: breathe 3s ease-in-out infinite;
+}
+.start-btn:hover {
+  background: rgba(255,255,255,0.13);
+  border-color: rgba(255,255,255,0.55);
+  box-shadow: 0 0 40px rgba(224,195,252,0.35);
+  transform: scale(1.05);
+}
+@keyframes breathe {
+  0%,100%{box-shadow:0 0 15px rgba(224,195,252,0.2)}
+  50%{box-shadow:0 0 35px rgba(224,195,252,0.4)}
+}
+
+/* ====== 相册/文件夹页面 ====== */
+#page-albums { display: none; }
+#page-albums.active { display: block; }
+#page-cover.hidden { display: none; }
+
+.page-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 40px 40px 0;
+  max-width: 1200px; margin: 0 auto;
+}
+.page-title {
+  font-size: 2rem; font-weight: 300;
+  letter-spacing: 5px; color: rgba(255,255,255,0.9);
+}
+.header-actions { display: flex; gap: 12px; }
+
+.icon-btn {
+  padding: 10px 22px; font-size: 0.95rem; letter-spacing: 2px;
+  color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px; background: rgba(255,255,255,0.06);
+  cursor: pointer; transition: all 0.3s;
+  font-family: inherit;
+}
+.icon-btn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  gap: 22px; padding: 35px 40px 60px;
+  max-width: 1200px; margin: 0 auto;
+}
+.album-card {
+  border-radius: 14px; overflow: hidden;
+  cursor: pointer; aspect-ratio: 4/3;
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+  position: relative; display: flex; flex-direction: column;
+}
+.album-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.28);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.45);
+}
+.album-thumb {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  font-size: 2.6rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+  overflow: hidden;
+}
+.album-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.album-thumb video { width: 100%; height: 100%; object-fit: cover; }
+
+.album-info {
+  padding: 14px 16px 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.5));
+}
+.album-name { font-size: 0.95rem; letter-spacing: 3px; }
+.album-meta { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top:3px; letter-spacing:1px; }
+
+.album-del {
+  position: absolute; top: 8px; right: 8px;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(0,0,0,0.5); border: none;
+  color: rgba(255,255,255,0.7); font-size: 1.1rem;
+  cursor: pointer; display: none; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.album-card:hover .album-del { display: flex; }
+.album-del:hover { background: rgba(220,50,50,0.7); }
+
+/* ====== 相册详情 ====== */
+#page-detail { display: none; }
+#page-detail.active { display: block; }
+
+.detail-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 35px 40px 0; max-width: 1200px; margin: 0 auto;
+}
+.back-link {
+  color: rgba(255,255,255,0.65); font-size: 1.4rem;
+  text-decoration: none; transition: color 0.3s; padding: 6px;
+}
+.back-link:hover { color: #fff; }
+.detail-title { font-size: 1.5rem; font-weight:300; letter-spacing:4px; }
+.detail-actions { margin-left: auto; display: flex; gap: 10px; }
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+  gap: 14px; padding: 30px 40px 60px;
+  max-width: 1200px; margin: 0 auto;
+}
+.photo-item {
+  border-radius: 10px; overflow: hidden; cursor: pointer;
+  aspect-ratio: 4/3; background: rgba(255,255,255,0.04);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.photo-item:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
+.photo-item img, .photo-item video { width:100%; height:100%; object-fit:cover; display:block; }
+.photo-item .file-icon {
+  width:100%; height:100%;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+  font-size: 2.4rem;
+}
+.photo-item .file-name {
+  font-size: 0.65rem; color: rgba(255,255,255,0.5);
+  margin-top: 6px; letter-spacing:1px;
+  text-align:center; padding:0 8px;
+  word-break: break-all;
+}
+.photo-del {
+  position: absolute; top: 6px; right: 6px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(0,0,0,0.5); border: none;
+  color: rgba(255,255,255,0.7); font-size: 1rem;
+  cursor: pointer; display: none; align-items:center; justify-content:center;
+  transition: background 0.2s;
+}
+.photo-item:hover .photo-del { display: flex; }
+.photo-del:hover { background: rgba(220,50,50,0.7); }
+
+.empty-msg { text-align:center; padding:80px 0; color:rgba(255,255,255,0.35); font-size:1.1rem; letter-spacing:4px; }
+
+/* ====== 灯箱 ====== */
+.lightbox {
+  display: none; position:fixed; top:0; left:0;
+  width:100%; height:100%; background:rgba(0,0,0,0.96);
+  z-index:999; align-items:center; justify-content:center; flex-direction:column;
+}
+.lightbox.active { display:flex; }
+.lb-media { max-width:90vw; max-height:82vh; object-fit:contain; border-radius:6px; }
+.lb-file-preview {
+  max-width:80vw; max-height:80vh;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 40px;
+  text-align: center; color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+}
+.lb-file-preview a {
+  color: var(--accent); text-decoration:none;
+  display: inline-block; margin-top: 15px; padding: 10px 25px;
+  border: 1px solid rgba(224,195,252,0.4); border-radius: 6px;
+  transition: all 0.3s;
+}
+.lb-file-preview a:hover { background: rgba(224,195,252,0.1); }
+
+.lb-close{
+  position:absolute; top:16px; right:26px;
+  font-size:2.3rem; color:rgba(255,255,255,0.6); cursor:pointer;
+  transition:color 0.3s; line-height:1;
+}
+.lb-close:hover{color:#fff}
+.lb-prev,.lb-next{
+  position:absolute; top:50%; transform:translateY(-50%);
+  font-size:2.6rem; color:rgba(255,255,255,0.5); cursor:pointer;
+  padding:18px; transition:color 0.3s; user-select:none;
+}
+.lb-prev{left:8px}
+.lb-next{right:8px}
+.lb-prev:hover,.lb-next:hover{color:#fff}
+.lb-counter{
+  position:absolute; bottom:16px; left:50%; transform:translateX(-50%);
+  color:rgba(255,255,255,0.45); font-size:0.82rem; letter-spacing:2px;
+}
+
+/* ====== 模态框 ====== */
+.modal-overlay {
+  display: none; position:fixed; top:0; left:0;
+  width:100%; height:100%; background:rgba(0,0,0,0.7);
+  z-index:1001; align-items:center; justify-content:center;
+}
+.modal-overlay.active { display:flex; }
+.modal {
+  background: linear-gradient(135deg, #1e2a45, #162035);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px; padding: 35px 40px;
+  min-width: 380px; max-width: 500px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+.modal-title {
+  font-size: 1.25rem; letter-spacing: 4px;
+  margin-bottom: 25px; color: rgba(255,255,255,0.9);
+}
+.modal-input {
+  width: 100%; padding: 12px 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; color: #fff;
+  font-size: 1rem; font-family: inherit;
+  margin-bottom: 18px;
+  transition: border-color 0.3s;
+}
+.modal-input:focus { outline: none; border-color: rgba(224,195,252,0.5); }
+.modal-input::placeholder { color: rgba(255,255,255,0.35); }
+.modal-row { display: flex; gap: 12px; margin-bottom: 18px; }
+.modal-row label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.85rem; color: rgba(255,255,255,0.7); cursor:pointer;
+}
+.modal-row input[type="radio"] { accent-color: var(--accent); }
+.modal-btns { display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px; }
+.mbtn {
+  padding: 10px 28px; border-radius: 8px;
+  font-size: 0.9rem; letter-spacing: 2px;
+  cursor: pointer; transition: all 0.3s;
+  font-family: inherit; border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.8);
+}
+.mbtn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); }
+.mbtn-primary {
+  background: rgba(224,195,252,0.15);
+  border-color: rgba(224,195,252,0.4);
+  color: var(--accent);
+}
+.mbtn-primary:hover { background: rgba(224,195,252,0.25); }
+
+.file-list { margin-bottom: 15px; max-height: 200px; overflow-y: auto; }
+.file-list-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; background: rgba(255,255,255,0.04);
+  border-radius: 6px; margin-bottom: 6px;
+  font-size: 0.85rem; color: rgba(255,255,255,0.7);
+}
+.file-list-item span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.file-list-item button {
+  background: none; border: none; color: rgba(255,255,255,0.4);
+  cursor: pointer; font-size: 1rem; padding: 0 4px;
+}
+.file-list-item button:hover { color: #f55; }
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ====== 封面 ====== -->
+<div id="page-cover">
+  <div class="cover-title">我们的故事</div>
+  <div class="together-info" id="togetherInfo">0 年 0 个月</div>
+  <div class="together-days" id="togetherDays">已在一起 0 天</div>
+  <div class="train-ticket" id="trainTicket">
+    <div class="tt-start">
+      <div class="tt-label">出发站</div>
+      <div class="tt-station">2024年3月9日</div>
+    </div>
+    <div class="tt-mid">
+      <div class="tt-train-num">520次</div>
+      <div class="tt-arrow">➜</div>
+      <div class="tt-date">we're on board</div>
+    </div>
+    <div class="tt-end">
+      <div class="tt-label">终点站</div>
+      <div class="tt-station">一生一世</div>
+    </div>
+  </div>
+  <a class="start-btn" href="javascript:void(0)" onclick="showAlbums()">启航</a>
+</div>
+
+<!-- ====== 相册列表 ====== -->
+<div id="page-albums">
+  <div class="page-header">
+    <div class="page-title">我们的故事</div>
+    <div class="header-actions">
+      <button class="icon-btn" onclick="openNewAlbumModal()">+ 新建相册</button>
+      <button class="icon-btn" onclick="openNewFolderModal()">+ 新建文件夹</button>
+    </div>
+  </div>
+  <div class="albums-grid" id="albumsGrid"></div>
+</div>
+
+<!-- ====== 相册详情 ====== -->
+<div id="page-detail">
+  <div class="detail-header">
+    <a class="back-link" href="javascript:void(0)" onclick="showAlbums()">← 返回</a>
+    <div class="detail-title" id="detailTitle"></div>
+    <div class="detail-actions">
+      <button class="icon-btn" onclick="openAddFilesModal()">+ 添加文件</button>
+    </div>
+  </div>
+  <div class="photos-grid" id="photosGrid"></div>
+</div>
+
+<!-- ====== 灯箱 ====== -->
+<div class="lightbox" id="lightbox">
+  <span class="lb-close" onclick="closeLb()">×</span>
+  <span class="lb-prev" id="lbPrev">‹</span>
+  <span class="lb-next" id="lbNext">›</span>
+  <div id="lbContent"></div>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- ====== 新建相册/文件夹模态框 ====== -->
+<div class="modal-overlay" id="modalNewAlbum">
+  <div class="modal">
+    <div class="modal-title" id="modalNewAlbumTitle">新建相册</div>
+    <input class="modal-input" id="newAlbumName" placeholder="请输入名称" maxlength="30">
+    <div class="modal-btns">
+      <button class="mbtn" onclick="closeModal('modalNewAlbum')">取消</button>
+      <button class="mbtn mbtn-primary" onclick="doCreateAlbum()">创建</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 添加文件模态框 ====== -->
+<div class="modal-overlay" id="modalAddFiles">
+  <div class="modal" style="min-width:460px">
+    <div class="modal-title" id="modalAddFilesTitle">添加文件</div>
+    <div class="file-list" id="pendingFilesList"></div>
+    <div style="margin-bottom:15px">
+      <input type="file" id="filePicker" multiple style="display:none" onchange="onFileSelected(this.files)">
+      <button class="icon-btn" onclick="document.getElementById('filePicker').click()" style="width:100%">+ 选择文件（可多选）</button>
+    </div>
+    <div class="modal-btns">
+      <button class="mbtn" onclick="closeModal('modalAddFiles')">取消</button>
+      <button class="mbtn mbtn-primary" onclick="doAddFiles()">添加</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====== 初始化 =====
+var STORAGE_KEY = 'our_story_albums_v2';
+var BASE_PATH = 'WEB';
+var START_DATE = new Date(2014, 2, 9, 0, 0, 0); // 2014年3月9日
+
+var albums = [];
+var currentAlbumId = null;
+var pendingFiles = []; // 待添加的文件 {name, path}
+var currentFiles = [];
+var currentIdx = 0;
+
+// ====== 在一起的时间 =====
+function updateTogetherTime() {
+  var now = new Date();
+  var y = START_DATE.getFullYear();
+  var m = START_DATE.getMonth();
+  var d = START_DATE.getDate();
+
+  var years = now.getFullYear() - y;
+  var months = now.getMonth() - m;
+  var days = now.getDate() - d;
+
+  if (days < 0) {
+    months--;
+    // 上个月有多少天
+    var prev = new Date(now.getFullYear(), now.getMonth(), 0);
+    days += prev.getDate();
+  }
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  // 总天数
+  var totalDays = Math.floor((now - START_DATE) / 86400000);
+
+  document.getElementById('togetherInfo').textContent = years + ' 年 ' + months + ' 个月';
+  document.getElementById('togetherDays').textContent = '已在一起 ' + totalDays + ' 天';
+}
+updateTogetherTime();
+setInterval(updateTogetherTime, 1000);
+
+// ====== 相册数据管理 =====
+function save() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(albums));
+}
+
+function load() {
+  var raw = localStorage.getItem(STORAGE_KEY);
+  if (raw) {
+    try { albums = JSON.parse(raw); } catch(e) { albums = []; }
+  }
+  // 如果是空的，初始化默认相册
+  if (albums.length === 0) {
+    albums = [
+      { id:'def1', name:'大学生活',   type:'album', files:[
+        { name:'微信图片_20241211224817.jpg', path:'大学生活/微信图片_20241211224817.jpg', kind:'img' }
+      ]},
+      { id:'def2', name:'高中时光',   type:'album', files:[] },
+      { id:'def3', name:'瑾宝出生啦', type:'album', files:[
+        { name:'MVI_7528.MP4', path:'瑾宝出生啦/MVI_7528.MP4', kind:'vid' }
+      ]},
+      { id:'def4', name:'我们结婚了', type:'album', files:[
+        { name:'IMG_7594.JPG', path:'我们结婚了/IMG_7594.JPG', kind:'img' },
+        { name:'IMG_7597.JPG', path:'我们结婚了/IMG_7597.JPG', kind:'img' }
+      ]},
+      { id:'def5', name:'五周年纪念日', type:'album', files:[
+        { name:'IMG_7564.JPG', path:'五周年纪恋日/IMG_7564.JPG', kind:'img' },
+        { name:'IMG_7565.JPG', path:'五周年纪恋日/IMG_7565.JPG', kind:'img' }
+      ]}
+    ];
+    save();
+  }
+}
+
+// ====== 导航 =====
+function showAlbums() {
+  document.getElementById('page-cover').classList.add('hidden');
+  document.getElementById('page-albums').classList.add('active');
+  document.getElementById('page-detail').classList.remove('active');
+  renderAlbums();
+}
+
+function showAlbum(id) {
+  currentAlbumId = id;
+  var album = albums.find(function(a){ return a.id === id; });
+  if (!album) return;
+  document.getElementById('page-cover').classList.add('hidden');
+  document.getElementById('page-albums').classList.remove('active');
+  document.getElementById('page-detail').classList.add('active');
+  document.getElementById('detailTitle').textContent = album.name;
+  renderPhotos();
+}
+
+function renderAlbums() {
+  var grid = document.getElementById('albumsGrid');
+  grid.innerHTML = '';
+  albums.forEach(function(album) {
+    var count = album.files ? album.files.length : 0;
+    var icon = '📂';
+    var thumbHTML = '<div class="album-thumb" style="font-size:2.6rem">' + icon + '</div>';
+
+    if (album.files.length > 0) {
+      var first = album.files[0];
+      if (first.kind === 'img') {
+        thumbHTML = '<div class="album-thumb"><img src="' + first.path + '"></div>';
+      } else if (first.kind === 'vid') {
+        thumbHTML = '<div class="album-thumb"><video src="' + first.path + '"></video></div>';
+      } else {
+        thumbHTML = '<div class="album-thumb" style="font-size:2.6rem">' + getKindIcon(first.kind) + '</div>';
+      }
+    }
+
+    var card = document.createElement('div');
+    card.className = 'album-card';
+    card.innerHTML = thumbHTML +
+      '<button class="album-del" onclick="event.stopPropagation();delAlbum(\'' + album.id + '\')">×</button>' +
+      '<div class="album-info">' +
+        '<div class="album-name">' + album.name + '</div>' +
+        '<div class="album-meta">' + count + ' 个文件</div>' +
+      '</div>';
+    card.onclick = (function(id){ return function(){ showAlbum(id); }; })(album.id);
+    grid.appendChild(card);
+  });
+}
+
+function renderPhotos() {
+  var album = albums.find(function(a){ return a.id === currentAlbumId; });
+  if (!album) return;
+  var grid = document.getElementById('photosGrid');
+  grid.innerHTML = '';
+
+  if (album.files.length === 0) {
+    grid.innerHTML = '<div class="empty-msg">暂无文件，点击右上角"添加文件"开始</div>';
+    return;
+  }
+
+  currentFiles = album.files;
+  album.files.forEach(function(file, i) {
+    var item = document.createElement('div');
+    item.className = 'photo-item';
+
+    if (file.kind === 'img') {
+      item.innerHTML = '<img src="' + file.path + '">' +
+        '<button class="photo-del" onclick="event.stopPropagation();delFile(' + i + ')">×</button>';
+    } else if (file.kind === 'vid') {
+      item.innerHTML = '<video src="' + file.path + '"></video>' +
+        '<button class="photo-del" onclick="event.stopPropagation();delFile(' + i + ')">×</button>';
+    } else {
+      item.innerHTML = '<div class="file-icon">' + getKindIcon(file.kind) + '<div class="file-name">' + file.name + '</div></div>' +
+        '<button class="photo-del" onclick="event.stopPropagation();delFile(' + i + ')">×</button>';
+    }
+
+    item.onclick = (function(idx){ return function(){ openLb(idx); }; })(i);
+    grid.appendChild(item);
+  });
+}
+
+// ====== 新建相册/文件夹 =====
+var modalMode = 'album'; // 'album' or 'folder'
+
+function openNewAlbumModal() {
+  modalMode = 'album';
+  document.getElementById('modalNewAlbumTitle').textContent = '新建相册';
+  document.getElementById('newAlbumName').value = '';
+  openModal('modalNewAlbum');
+}
+
+function openNewFolderModal() {
+  modalMode = 'folder';
+  document.getElementById('modalNewAlbumTitle').textContent = '新建文件夹';
+  document.getElementById('newAlbumName').value = '';
+  openModal('modalNewAlbum');
+}
+
+function doCreateAlbum() {
+  var name = document.getElementById('newAlbumName').value.replace(/^\s+|\s+$/g,'');
+  if (!name) { alert('请输入名称'); return; }
+  albums.push({
+    id: 'a' + Date.now(),
+    name: name,
+    type: modalMode,
+    files: []
+  });
+  save();
+  closeModal('modalNewAlbum');
+  renderAlbums();
+}
+
+// ====== 删除相册 =====
+function delAlbum(id) {
+  if (!confirm('确定删除此相册（' + albums.find(function(a){return a.id===id;}).name + '）？')) return;
+  albums = albums.filter(function(a){ return a.id !== id; });
+  save();
+  renderAlbums();
+}
+
+// ====== 添加文件 =====
+function openAddFilesModal() {
+  pendingFiles = [];
+  renderPendingFiles();
+  openModal('modalAddFiles');
+}
+
+function onFileSelected(files) {
+  for (var i = 0; i < files.length; i++) {
+    var f = files[i];
+    var kind = guessKind(f.name);
+    pendingFiles.push({
+      name: f.name,
+      path: f.name, // 相对路径，由用户确认
+      kind: kind
+    });
+  }
+  renderPendingFiles();
+  document.getElementById('filePicker').value = '';
+}
+
+function renderPendingFiles() {
+  var list = document.getElementById('pendingFilesList');
+  if (pendingFiles.length === 0) {
+    list.innerHTML = '<div style="color:rgba(255,255,255,0.3);font-size:0.85rem;padding:10px 0;text-align:center">暂未选择文件</div>';
+    return;
+  }
+  list.innerHTML = '';
+  pendingFiles.forEach(function(f, i) {
+    var div = document.createElement('div');
+    div.className = 'file-list-item';
+    div.innerHTML = '<span>' + getKindIcon(f.kind) + ' ' + f.name + '</span>' +
+      '<button onclick="removePending(' + i + ')">×</button>';
+    list.appendChild(div);
+  });
+}
+
+function removePending(i) {
+  pendingFiles.splice(i, 1);
+  renderPendingFiles();
+}
+
+function doAddFiles() {
+  var album = albums.find(function(a){ return a.id === currentAlbumId; });
+  if (!album) return;
+  pendingFiles.forEach(function(f) {
+    album.files.push({
+      name: f.name,
+      path: album.name + '/' + f.name,
+      kind: f.kind
+    });
+  });
+  save();
+  closeModal('modalAddFiles');
+  pendingFiles = [];
+  renderPhotos();
+}
+
+// ====== 删除文件 =====
+function delFile(i) {
+  var album = albums.find(function(a){ return a.id === currentAlbumId; });
+  if (!album) return;
+  if (!confirm('确定删除 ' + album.files[i].name + '？')) return;
+  album.files.splice(i, 1);
+  save();
+  renderPhotos();
+}
+
+// ====== 工具函数 =====
+function guessKind(name) {
+  var ext = name.split('.').pop().toLowerCase();
+  var imgExts  = ['jpg','jpeg','png','gif','webp','bmp','svg'];
+  var vidExts  = ['mp4','mov','avi','webm','mkv','3gp','wmv'];
+  var docExts  = ['doc','docx','xls','xlsx','ppt','pptx','pdf','txt','md'];
+  var arcExts  = ['zip','rar','7z','tar','gz'];
+  if (imgExts.indexOf(ext) !== -1)  return 'img';
+  if (vidExts.indexOf(ext) !== -1)  return 'vid';
+  if (arcExts.indexOf(ext) !== -1)  return 'arc';
+  if (docExts.indexOf(ext) !== -1)  return 'doc';
+  return 'file';
+}
+
+function getKindIcon(kind) {
+  var icons = {
+    img:'🖼️', vid:'🎬', arc:'📦', doc:'📄', file:'📎'
+  };
+  return icons[kind] || '📎';
+}
+
+// ====== 灯箱 ======
+function openLb(idx) {
+  currentIdx = idx;
+  showLbMedia();
+  document.getElementById('lightbox').classList.add('active');
+}
+
+function showLbMedia() {
+  var f = currentFiles[currentIdx];
+  var content = document.getElementById('lbContent');
+  content.innerHTML = '';
+
+  if (f.kind === 'img') {
+    var img = document.createElement('img');
+    img.className = 'lb-media'; img.src = f.path;
+    content.appendChild(img);
+  } else if (f.kind === 'vid') {
+    var vid = document.createElement('video');
+    vid.className = 'lb-media'; vid.src = f.path;
+    vid.controls = true; vid.autoplay = true;
+    content.appendChild(vid);
+  } else {
+    var ext = f.name.split('.').pop().toLowerCase();
+    content.innerHTML = '<div class="lb-file-preview">' +
+      '<div style="font-size:3rem;margin-bottom:15px">' + getKindIcon(f.kind) + '</div>' +
+      '<div>' + f.name + '</div>' +
+      '<a href="' + f.path + '" download="' + f.name + '">下载文件</a>' +
+    '</div>';
+  }
+
+  document.getElementById('lbCounter').textContent = (currentIdx+1) + ' / ' + currentFiles.length;
+}
+
+function closeLb() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.getElementById('lbContent').innerHTML = '';
+}
+function prevLb(e){ e.stopPropagation(); currentIdx=(currentIdx-1+currentFiles.length)%currentFiles.length; showLbMedia(); }
+function nextLb(e){ e.stopPropagation(); currentIdx=(currentIdx+1)%currentFiles.length; showLbMedia(); }
+
+document.getElementById('lbPrev').onclick = prevLb;
+document.getElementById('lbNext').onclick = nextLb;
+document.getElementById('lightbox').onclick = function(e){ if(e.target===this) closeLb(); };
+document.onkeydown = function(e) {
+  if (document.getElementById('lightbox').className.indexOf('active') === -1) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') prevLb(e);
+  if (e.key === 'ArrowRight') nextLb(e);
+};
+
+// ====== 模态框 =====
+function openModal(id) { document.getElementById(id).classList.add('active'); }
+function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
+// ====== 启动 =====
+load();
+</script>
+</body>
+</html>
