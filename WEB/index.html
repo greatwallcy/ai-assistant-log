@@ -20,6 +20,70 @@ body {
   overflow-x: hidden;
 }
 
+/* ====== 高铁票样式 ====== */
+.train-ticket {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+.tt-start, .tt-end {
+  padding: 18px 28px;
+  text-align: center;
+  min-width: 130px;
+}
+.tt-start {
+  background: rgba(224,195,252,0.08);
+  border-right: 1px dashed rgba(255,255,255,0.15);
+}
+.tt-end {
+  background: rgba(224,195,252,0.08);
+  border-left: 1px dashed rgba(255,255,255,0.15);
+}
+.tt-mid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  gap: 4px;
+}
+.tt-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 3px;
+  margin-bottom: 4px;
+}
+.tt-station {
+  font-size: 1.05rem;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.tt-train-num {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(224,195,252,0.5);
+}
+.tt-arrow {
+  font-size: 1.8rem;
+  color: rgba(255,255,255,0.5);
+}
+.tt-date {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 2px;
+}
+
 /* ====== 封面 ====== */
 #page-cover {
   display: flex; flex-direction: column;
@@ -43,17 +107,6 @@ body {
 .together-days {
   font-size: 1.1rem; color: rgba(255,255,255,0.6);
   letter-spacing: 3px; margin-bottom: 40px;
-}
-.time-row {
-  font-size: 3rem; font-weight: 200;
-  letter-spacing: 10px; color: #fff;
-  margin-bottom: 50px;
-  text-shadow: 0 0 30px rgba(255,255,255,0.2);
-}
-.divider {
-  width: 100px; height: 1px;
-  background: linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
-  margin: 0 auto 45px;
 }
 .start-btn {
   display: inline-block; padding: 15px 55px;
@@ -325,8 +378,21 @@ body {
   <div class="cover-title">我们的故事</div>
   <div class="together-info" id="togetherInfo">0 年 0 个月</div>
   <div class="together-days" id="togetherDays">已在一起 0 天</div>
-  <div class="divider"></div>
-  <div class="time-row" id="timeRow">00:00:00</div>
+  <div class="train-ticket" id="trainTicket">
+    <div class="tt-start">
+      <div class="tt-label">出发站</div>
+      <div class="tt-station">2024年3月9日</div>
+    </div>
+    <div class="tt-mid">
+      <div class="tt-train-num">520次</div>
+      <div class="tt-arrow">➜</div>
+      <div class="tt-date">we're on board</div>
+    </div>
+    <div class="tt-end">
+      <div class="tt-label">终点站</div>
+      <div class="tt-station">一生一世</div>
+    </div>
+  </div>
   <a class="start-btn" href="javascript:void(0)" onclick="showAlbums()">启航</a>
 </div>
 
@@ -428,13 +494,8 @@ function updateTogetherTime() {
   // 总天数
   var totalDays = Math.floor((now - START_DATE) / 86400000);
 
-  var h = String(now.getHours()).padStart(2,'0');
-  var mi = String(now.getMinutes()).padStart(2,'0');
-  var s = String(now.getSeconds()).padStart(2,'0');
-
   document.getElementById('togetherInfo').textContent = years + ' 年 ' + months + ' 个月';
   document.getElementById('togetherDays').textContent = '已在一起 ' + totalDays + ' 天';
-  document.getElementById('timeRow').textContent = h + ':' + mi + ':' + s;
 }
 updateTogetherTime();
 setInterval(updateTogetherTime, 1000);
