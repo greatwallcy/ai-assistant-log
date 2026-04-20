@@ -416,7 +416,7 @@ body {
     <div class="detail-actions">
       <button class="icon-btn" onclick="openAddFilesModal()">+ 添加文件</button>
       <button class="icon-btn" onclick="openNewFolderModal()">+ 新建文件夹</button>
-      <button class="icon-btn" onclick="showAlbums()">回到首页</button>
+      <button class="icon-btn" onclick="showCover()">回到首页</button>
     </div>
   </div>
   <div class="photos-grid" id="photosGrid"></div>
@@ -536,6 +536,12 @@ function load() {
 }
 
 // ====== 导航 =====
+function showCover() {
+  document.getElementById('page-cover').classList.remove('hidden');
+  document.getElementById('page-albums').classList.remove('active');
+  document.getElementById('page-detail').classList.remove('active');
+}
+
 function showAlbums() {
   document.getElementById('page-cover').classList.add('hidden');
   document.getElementById('page-albums').classList.add('active');
