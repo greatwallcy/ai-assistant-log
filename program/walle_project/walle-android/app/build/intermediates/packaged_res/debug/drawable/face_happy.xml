@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WALL-E 开心表情 - 前进时 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+
+    <!-- 左眼 - 眯眼 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,55 Q35,45 50,45 L70,45 Q85,45 85,55 L85,75 Q85,85 70,85 L50,85 Q35,85 35,75 Z" />
+
+    <!-- 右眼 - 眯眼 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,55 Q75,45 90,45 L110,45 Q125,45 125,55 L125,75 Q125,85 110,85 L90,85 Q75,85 75,75 Z" />
+
+    <!-- 左瞳孔 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M60,60 m-10,0 a10,10 0,1 1,20,0 a10,10 0,1 1,-20,0" />
+
+    <!-- 右瞳孔 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M100,60 m-10,0 a10,10 0,1 1,20,0 a10,10 0,1 1,-20,0" />
+
+    <!-- 高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54 m-3,0 a3,3 0,1 1,6,0 a3,3 0,1 1,-6,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M94,54 m-3,0 a3,3 0,1 1,6,0 a3,3 0,1 1,-6,0" />
+
+    <!-- 大笑嘴巴 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,110 Q80,145 110,110 Q80,125 50,110 Z" />
+</vector>

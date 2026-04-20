@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_amber">#FFC107</color>
+    <color name="accent_blue">#2196F3</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="bg_dark">#1A1A2E</color>
+    <color name="btn_inactive">#37474F</color>
+    <color name="connected_green">#4CAF50</color>
+    <color name="disconnected_red">#EF5350</color>
+    <color name="lcd_bg">#0A0A0A</color>
+    <color name="lcd_border">#333333</color>
+    <color name="surface_dark">#16213E</color>
+    <color name="text_secondary">#B0BEC5</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">WALL-E 遥控器</string>
+    <string name="buzzer">蜂鸣器</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
+    <string name="disconnected">未连接</string>
+    <string name="eye_left">左眼</string>
+    <string name="eye_right">右眼</string>
+    <string name="speed">速度</string>
+    <string name="speed_high">高速</string>
+    <string name="speed_low">低速</string>
+    <string name="speed_mid">中速</string>
+    <style name="Theme.WallERobot" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_green</item>
+        <item name="colorPrimaryDark">@color/surface_dark</item>
+        <item name="colorAccent">@color/accent_green</item>
+        <item name="android:statusBarColor">@color/surface_dark</item>
+        <item name="android:navigationBarColor">@color/surface_dark</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+    </style>
+</resources>

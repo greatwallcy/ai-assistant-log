@@ -1,0 +1,18 @@
+# WEB folder (embedded git repo)
+WEB/
+
+# Android build artifacts
+program/walle_project/walle-android/app/build/
+program/walle_project/walle-android/build/
+program/walle_project/walle-android/.gradle/
+
+# STM32 build artifacts
+program/Robot\ dog_project/桌面宠物代码/Objects/
+program/Robot\ dog_project/桌面宠物代码/Listings/
+program/Robot\ dog_project/桌面宠物代码/DebugConfig/
+program/Robot\ dog_project/桌面宠物代码/EventRecorderStub.scvd
+
+# IDE files
+*.uvguix.*
+*.uvoptx
+*.uvprojx

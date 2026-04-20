@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WALL-E 正常表情 - 大眼睛 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+
+    <!-- 左眼框 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,50 Q35,35 50,35 L70,35 Q85,35 85,50 L85,80 Q85,95 70,95 L50,95 Q35,95 35,80 Z" />
+
+    <!-- 右眼框 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,50 Q75,35 90,35 L110,35 Q125,35 125,50 L125,80 Q125,95 110,95 L90,95 Q75,95 75,80 Z" />
+
+    <!-- 左瞳孔 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M60,55 m-12,0 a12,12 0,1 1,24,0 a12,12 0,1 1,-24,0" />
+
+    <!-- 右瞳孔 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M100,55 m-12,0 a12,12 0,1 1,24,0 a12,12 0,1 1,-24,0" />
+
+    <!-- 左眼高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M53,48 m-4,0 a4,4 0,1 1,8,0 a4,4 0,1 1,-8,0" />
+
+    <!-- 右眼高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M93,48 m-4,0 a4,4 0,1 1,8,0 a4,4 0,1 1,-8,0" />
+
+    <!-- 嘴巴 - 微笑 -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"
+        android:pathData="M55,115 Q80,135 105,115" />
+</vector>

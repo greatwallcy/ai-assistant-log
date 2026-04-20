@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WALL-E 图标 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 背景 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M0,0h108v108h-108z" />
+
+    <!-- 机器人身体 -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M28,42h52v40h-52z" />
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M28,42h52v8h-52z" />
+
+    <!-- 左眼 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,50h14v18h-14z" />
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M43,55h4v8h-4z" />
+
+    <!-- 右眼 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,50h14v18h-14z" />
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M61,55h4v8h-4z" />
+
+    <!-- 颈部 -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M48,82h12v6h-12z" />
+
+    <!-- 轨道 -->
+    <path
+        android:fillColor="#616161"
+        android:pathData="M24,88h60v12h-60z" />
+    <path
+        android:fillColor="#424242"
+        android:pathData="M28,90h52v8h-52z" />
+</vector>

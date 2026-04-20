@@ -1,0 +1,45 @@
+#ifndef __PETACTION_H
+#define __PETACTION_H
+
+void Action_relaxed_getdowm(void);
+void Action_upright(void);
+void Action_getdowm(void);
+void Action_sit(void);
+void Action_Swing(void);
+void Action_advance(void);
+void Action_back(void);
+void Action_Lrotation(void);
+void Action_Rrotation(void);
+void Action_SwingTail(void);//摇尾巴
+void Action_JumpD(void);//向后跳
+void Action_JumpU(void);//向前跳
+void Action_upright2(void);//动作辅助
+void Action_Hello(void);//打招呼
+void Action_stretch(void);//伸懒腰
+void Action_Lstretch(void);//后腿拉伸
+void Action_dance(void);//跳舞
+void Action_left_right_Lstretch(void);//左右摇摆
+void Action_push_up(void);//做俯卧撑
+void Action_stretch_hand(void);//伸手
+void Action_lay_down(void);//放下
+extern const uint8_t MP3_Send[][8];
+void music_shuffle_play(void);//随机播放
+void music_one_cycle_start(void);//单曲循环--开始
+void music_one_cycle_stop(void);//单曲循环--结束
+void music_type_cycle_start(void);//类型循环--开始
+void music_type_cycle_stop(void);//类型循环--结束
+void music_next_song(void);//下一曲
+void music_last_song(void);//上一曲
+void music_volume_set_80(void);//音量设置为80
+void music_volume_set_60(void);//音量设置为60
+void music_volume_set_40(void);//音量设置为40
+void music_volume_set_20(void);//音量设置为20
+void music_stop_play(void);//停止播放
+void music_start_play(void);//播放
+void music_pause_play(void);//暂停
+void music_all_cycle_start(void);//全部循环--开始
+void music_all_cycle_stop(void);//全部循环--结束
+void music_play_music(void);//普通音乐播放
+void music_play_art(void);//戏曲播放
+void music_play_childern(void);//儿歌播放
+#endif

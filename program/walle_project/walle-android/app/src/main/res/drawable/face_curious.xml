@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WALL-E 好奇表情 - 左右转时 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+
+    <!-- 左眼 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,50 Q35,35 50,35 L70,35 Q85,35 85,50 L85,80 Q85,95 70,95 L50,95 Q35,95 35,80 Z" />
+
+    <!-- 右眼 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,50 Q75,35 90,35 L110,35 Q125,35 125,50 L125,80 Q125,95 110,95 L90,95 Q75,95 75,80 Z" />
+
+    <!-- 左瞳孔 - 看向一边 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M68,60 m-12,0 a12,12 0,1 1,24,0 a12,12 0,1 1,-24,0" />
+
+    <!-- 右瞳孔 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M108,60 m-12,0 a12,12 0,1 1,24,0 a12,12 0,1 1,-24,0" />
+
+    <!-- 高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,53 m-3,0 a3,3 0,1 1,6,0 a3,3 0,1 1,-6,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M102,53 m-3,0 a3,3 0,1 1,6,0 a3,3 0,1 1,-6,0" />
+
+    <!-- 嘴巴 - 侧笑 -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"
+        android:pathData="M55,118 Q75,128 105,112" />
+</vector>

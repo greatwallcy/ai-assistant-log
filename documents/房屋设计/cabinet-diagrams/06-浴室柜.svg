@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 750" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bathBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D6EAF8"/>
+      <stop offset="100%" stop-color="#AED6F1"/>
+    </linearGradient>
+    <linearGradient id="bathMetal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8E8E8"/>
+      <stop offset="100%" stop-color="#D5D5D5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="26" font-weight="bold" fill="#2C3E50">浴室柜 · 设计示意图</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">防水是第一优先级 · 多层实木/PVC/铝合金板材</text>
+
+  <!-- ====== Mirror Cabinet (Wall Mount) ====== -->
+  <text x="200" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#3498DB">镜柜（墙面挂装）</text>
+
+  <!-- Mirror cabinet frame -->
+  <rect x="50" y="105" width="300" height="280" rx="5" fill="#FAFAFA" stroke="#7F8C8D" stroke-width="2"/>
+
+  <!-- Mirror surface (front) -->
+  <rect x="60" y="115" width="280" height="80" rx="3" fill="url(#bathMetal)" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="200" y="160" text-anchor="middle" font-size="12" fill="#7F8C8D">🪞 镜面（防雾）</text>
+
+  <!-- LED light -->
+  <rect x="60" y="198" width="280" height="5" rx="2" fill="#F1C40F" opacity="0.8"/>
+  <text x="200" y="218" text-anchor="middle" font-size="10" fill="#D4AC0D">💡 LED镜前灯 4000K（化妆不偏色）</text>
+
+  <!-- Internal shelves -->
+  <line x1="62" y1="235" x2="338" y2="235" stroke="#BDC3C7" stroke-width="1.5"/>
+  <line x1="62" y1="290" x2="338" y2="290" stroke="#BDC3C7" stroke-width="1.5"/>
+  <line x1="62" y1="340" x2="338" y2="340" stroke="#BDC3C7" stroke-width="1.5"/>
+
+  <!-- Items in mirror cabinet -->
+  <rect x="80" y="242" width="25" height="40" rx="3" fill="#FADBD8" opacity="0.6"/>
+  <rect x="110" y="248" width="20" height="34" rx="3" fill="#EBF5FB" opacity="0.6"/>
+  <rect x="135" y="244" width="18" height="38" rx="3" fill="#D5F5E3" opacity="0.6"/>
+  <text x="250" y="268" text-anchor="middle" font-size="10" fill="#5D6D7E">护肤品/化妆品</text>
+
+  <rect x="80" y="300" width="30" height="28" rx="3" fill="#AED6F1" opacity="0.5"/>
+  <text x="95" y="318" text-anchor="middle" font-size="7" fill="#fff">牙刷</text>
+  <rect x="120" y="298" width="25" height="30" rx="3" fill="#D5D8DC" opacity="0.5"/>
+  <text x="132" y="318" text-anchor="middle" font-size="7" fill="#fff">剃须</text>
+  <!-- Socket -->
+  <rect x="160" y="302" width="22" height="15" rx="2" fill="#F1C40F" stroke="#D4AC0D" stroke-width="1"/>
+  <text x="171" y="313" text-anchor="middle" font-size="6" fill="#7D6608">⚡</text>
+  <text x="260" y="320" text-anchor="middle" font-size="10" fill="#5D6D7E">牙刷/剃须刀 + 插座</text>
+
+  <rect x="80" y="350" width="30" height="25" rx="3" fill="#FDEBD0" opacity="0.6"/>
+  <rect x="115" y="348" width="25" height="27" rx="3" fill="#F5EEF8" opacity="0.6"/>
+  <text x="250" y="370" text-anchor="middle" font-size="10" fill="#5D6D7E">药品/杂物</text>
+
+  <!-- Depth annotation -->
+  <line x1="355" y1="115" x2="355" y2="385" stroke="#E74C3C" stroke-width="1.5"/>
+  <polygon points="355,115 350,125 360,125" fill="#E74C3C"/>
+  <polygon points="355,385 350,375 360,375" fill="#E74C3C"/>
+  <text x="370" y="255" font-size="10" fill="#E74C3C">深 120-150mm</text>
+  <text x="370" y="268" font-size="9" fill="#E74C3C">（太深碰头）</text>
+
+  <!-- ====== Base Cabinet ====== -->
+  <text x="200" y="420" text-anchor="middle" font-size="16" font-weight="bold" fill="#3498DB">底柜</text>
+
+  <!-- Wall pipe (wall drainage) -->
+  <rect x="160" y="435" width="12" height="120" rx="3" fill="#BDC3C7" opacity="0.5"/>
+  <text x="135" y="500" font-size="8" fill="#95A5A6" transform="rotate(-90,135,500)">墙排管</text>
+
+  <!-- Counter + Sink -->
+  <rect x="50" y="440" width="300" height="18" rx="2" fill="url(#bathMetal)" stroke="#95A5A6" stroke-width="1.5"/>
+  <!-- Undermount sink -->
+  <ellipse cx="200" cy="458" rx="60" ry="12" fill="#AED6F1" stroke="#7F8C8D" stroke-width="1.5"/>
+  <text x="200" y="462" text-anchor="middle" font-size="9" fill="#2874A6">台下盆</text>
+  <!-- Faucet -->
+  <rect x="196" y="430" width="8" height="12" rx="2" fill="#BDC3C7"/>
+  <path d="M192,430 Q200,420 208,430" fill="none" stroke="#BDC3C7" stroke-width="2"/>
+  <circle cx="200" cy="422" r="3" fill="#BDC3C7"/>
+
+  <!-- Backsplash -->
+  <rect x="50" y="430" width="300" height="10" rx="1" fill="#D5D8DC" opacity="0.5"/>
+  <text x="200" y="438" text-anchor="middle" font-size="7" fill="#7F8C8D">靠墙挡水条</text>
+
+  <!-- Cabinet body -->
+  <rect x="50" y="460" width="300" height="120" rx="3" fill="#FAF3EB" stroke="#A0845C" stroke-width="2"/>
+
+  <!-- Left: Drawer -->
+  <rect x="55" y="465" width="90" height="52" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1.5"/>
+  <circle cx="100" cy="491" r="3" fill="#A0845C"/>
+  <text x="100" y="483" text-anchor="middle" font-size="8" fill="#A0764A">小件抽屉</text>
+  <!-- Items -->
+  <rect x="65" y="498" width="15" height="12" rx="1" fill="#FADBD8" opacity="0.5"/>
+  <rect x="85" y="496" width="12" height="14" rx="1" fill="#EBF5FB" opacity="0.5"/>
+  <rect x="105" y="499" width="10" height="11" rx="1" fill="#D5F5E3" opacity="0.5"/>
+
+  <rect x="55" y="521" width="90" height="52" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1.5"/>
+  <circle cx="100" cy="547" r="3" fill="#A0845C"/>
+  <text x="100" y="547" text-anchor="middle" font-size="8" fill="#A0764A">日用品抽屉</text>
+
+  <!-- Right: Door cabinet -->
+  <rect x="150" y="465" width="195" height="108" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1.5"/>
+  <line x1="248" y1="467" x2="248" y2="571" stroke="#C49455" stroke-width="1"/>
+  <circle cx="242" cy="520" r="3" fill="#A0845C"/>
+  <circle cx="254" cy="520" r="3" fill="#A0845C"/>
+  <text x="200" y="500" text-anchor="middle" font-size="10" fill="#A0764A">清洁用品</text>
+  <text x="200" y="518" text-anchor="middle" font-size="10" fill="#A0764A">备用纸巾</text>
+  <text x="200" y="536" text-anchor="middle" font-size="10" fill="#A0764A">吹风机</text>
+  <!-- Items -->
+  <rect x="165" y="545" width="25" height="20" rx="2" fill="#AED6F1" opacity="0.3"/>
+  <rect x="195" y="540" width="20" height="25" rx="2" fill="#FADBD8" opacity="0.3"/>
+  <rect x="220" y="548" width="30" height="17" rx="2" fill="#D5F5E3" opacity="0.3"/>
+
+  <!-- Bottom void -->
+  <rect x="50" y="582" width="300" height="40" rx="2" fill="#E8F8F5" stroke="#A3E4D7" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="200" y="606" text-anchor="middle" font-size="11" fill="#148F77" font-weight="bold">底部悬空 150-200mm</text>
+  <text x="200" y="620" text-anchor="middle" font-size="9" fill="#1ABC9C">防潮 + 方便清洁</text>
+
+  <!-- ====== Material Selection Panel ====== -->
+  <rect x="400" y="80" width="380" height="340" rx="5" fill="#FAFAFA" stroke="#BDC3C7" stroke-width="1.5"/>
+  <text x="590" y="105" text-anchor="middle" font-size="16" font-weight="bold" fill="#2C3E50">材质选择（防水优先）</text>
+
+  <!-- Material cards -->
+  <rect x="415" y="120" width="170" height="80" rx="5" fill="#EBF5FB" stroke="#AED6F1" stroke-width="2"/>
+  <text x="500" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#2874A6">柜体</text>
+  <text x="425" y="162" font-size="10" fill="#5D6D7E">✅ 多层实木板（贴PVC膜）</text>
+  <text x="425" y="178" font-size="10" fill="#5D6D7E">✅ 铝合金柜体</text>
+  <text x="425" y="194" font-size="10" fill="#E74C3C">❌ 刨花板/密度板（受潮膨胀）</text>
+
+  <rect x="595" y="120" width="170" height="80" rx="5" fill="#EBF5FB" stroke="#AED6F1" stroke-width="2"/>
+  <text x="680" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#2874A6">台面</text>
+  <text x="605" y="162" font-size="10" fill="#5D6D7E">⭐ 陶瓷一体盆（最佳）</text>
+  <text x="605" y="178" font-size="10" fill="#5D6D7E">✅ 石英石台面</text>
+  <text x="605" y="194" font-size="10" fill="#95A5A6">台上盆边缘易发霉</text>
+
+  <rect x="415" y="210" width="170" height="65" rx="5" fill="#EBF5FB" stroke="#AED6F1" stroke-width="2"/>
+  <text x="500" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#2874A6">镜柜</text>
+  <text x="425" y="252" font-size="10" fill="#5D6D7E">✅ 铝合金框 + 防雾镜</text>
+  <text x="425" y="267" font-size="10" fill="#5D6D7E">✅ 带除雾功能</text>
+
+  <rect x="595" y="210" width="170" height="65" rx="5" fill="#EBF5FB" stroke="#AED6F1" stroke-width="2"/>
+  <text x="680" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#2874A6">五金</text>
+  <text x="605" y="252" font-size="10" fill="#5D6D7E">✅ 304不锈钢铰链</text>
+  <text x="605" y="267" font-size="10" fill="#5D6D7E">✅ 阻尼缓冲</text>
+
+  <!-- Drainage comparison -->
+  <rect x="415" y="285" width="170" height="55" rx="5" fill="#FDEBD0" stroke="#F5CBA7" stroke-width="1.5"/>
+  <text x="500" y="305" text-anchor="middle" font-size="11" font-weight="bold" fill="#A04000">墙排 ⭐推荐</text>
+  <text x="425" y="322" font-size="9" fill="#7D6608">美观 · 底部无管道遮挡</text>
+  <text x="425" y="334" font-size="9" fill="#7D6608">水电阶段预埋排水管</text>
+
+  <rect x="595" y="285" width="170" height="55" rx="5" fill="#F5F5F5" stroke="#D5D8DC" stroke-width="1.5"/>
+  <text x="680" y="305" text-anchor="middle" font-size="11" font-weight="bold" fill="#7F8C8D">地排</text>
+  <text x="605" y="322" font-size="9" fill="#95A5A6">管道外露</text>
+  <text x="605" y="334" font-size="9" fill="#95A5A6">底部空间浪费</text>
+
+  <!-- ====== Avoid Mistakes Panel ====== -->
+  <rect x="400" y="440" width="380" height="240" rx="5" fill="#FDEDEC" stroke="#F5B7B1" stroke-width="1.5"/>
+  <text x="590" y="465" text-anchor="middle" font-size="16" font-weight="bold" fill="#C0392B">⚠️ 避坑指南</text>
+
+  <text x="415" y="492" font-size="11" fill="#2C3E50">❌ 用刨花板/密度板</text>
+  <text x="600" y="492" font-size="10" fill="#95A5A6">→ 受潮膨胀变形</text>
+
+  <text x="415" y="515" font-size="11" fill="#2C3E50">❌ 台上盆</text>
+  <text x="600" y="515" font-size="10" fill="#95A5A6">→ 边缘发霉难打理</text>
+
+  <text x="415" y="538" font-size="11" fill="#2C3E50">❌ 不留镜柜插座</text>
+  <text x="600" y="538" font-size="10" fill="#95A5A6">→ 电动牙刷充电无处插</text>
+
+  <text x="415" y="561" font-size="11" fill="#2C3E50">❌ 地排水</text>
+  <text x="600" y="561" font-size="10" fill="#95A5A6">→ 管道外露、底部空间浪费</text>
+
+  <text x="415" y="584" font-size="11" fill="#2C3E50">❌ 镜柜深度>150mm</text>
+  <text x="600" y="584" font-size="10" fill="#95A5A6">→ 弯腰洗脸碰头</text>
+
+  <text x="415" y="607" font-size="11" fill="#2C3E50">❌ 不做挡水条</text>
+  <text x="600" y="607" font-size="10" fill="#95A5A6">→ 水渗入墙缝发霉</text>
+
+  <text x="415" y="635" font-size="11" fill="#1E8449" font-weight="bold">✅ 正确做法：</text>
+  <text x="600" y="635" font-size="10" fill="#27AE60">多层实木板 + 台下盆/一体盆 + 墙排</text>
+  <text x="600" y="650" font-size="10" fill="#27AE60">镜柜带灯带除雾 + 镜柜内预留插座</text>
+  <text x="600" y="665" font-size="10" fill="#27AE60">底部悬空 + 台面挡水条</text>
+
+  <!-- Bottom summary -->
+  <rect x="50" y="660" width="300" height="75" rx="5" fill="#E8F8F5" stroke="#A3E4D7" stroke-width="1.5"/>
+  <text x="200" y="685" text-anchor="middle" font-size="13" font-weight="bold" fill="#148F77">💡 浴室柜核心原则</text>
+  <text x="65" y="705" font-size="10" fill="#148F77">1. 防水 > 一切（板材必须防水）</text>
+  <text x="65" y="720" font-size="10" fill="#148F77">2. 台下盆 > 台上盆（好打理）</text>
+  <text x="65" y="730" font-size="10" fill="#148F77">3. 墙排 > 地排（美观好清洁）</text>
+</svg>

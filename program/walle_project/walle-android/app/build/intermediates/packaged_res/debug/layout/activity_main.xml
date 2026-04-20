@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <!-- 顶部状态栏 -->
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/surface_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disconnected"
+            android:textColor="@color/disconnected_red"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_connect"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="8dp"
+            app:icon="@drawable/ic_bluetooth"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white"
+            style="@style/Widget.Material3.Button.IconButton" />
+    </LinearLayout>
+
+    <!-- LCD表情显示区 -->
+    <FrameLayout
+        android:id="@+id/lcd_container"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/lcd_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_bar">
+
+        <ImageView
+            android:id="@+id/iv_lcd_face"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/face_normal" />
+    </FrameLayout>
+
+    <!-- 摇杆区域 -->
+    <com.walle.robot.ui.JoystickView
+        android:id="@+id/joystick"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/control_panel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/right_controls" />
+
+    <!-- 右侧控制面板 -->
+    <LinearLayout
+        android:id="@+id/right_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/control_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/joystick"
+        app:layout_constraintTop_toBottomOf="@id/lcd_container">
+
+        <!-- 蜂鸣器开关 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_buzzer"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_buzzer"
+            app:iconGravity="textStart"
+            app:iconSize="28dp"
+            app:iconTint="@color/white"
+            android:text="🔔"
+            android:textSize="24sp"
+            app:cornerRadius="32dp"
+            app:backgroundTint="@color/btn_inactive" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="12dp" />
+
+        <!-- 左眼灯 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_eye_left"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="👁L"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:cornerRadius="32dp"
+            app:backgroundTint="@color/btn_inactive" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="8dp" />
+
+        <!-- 右眼灯 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_eye_right"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="👁R"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:cornerRadius="32dp"
+            app:backgroundTint="@color/btn_inactive" />
+    </LinearLayout>
+
+    <!-- 底部速度控制 -->
+    <LinearLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_dark"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/speed"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/speed_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_speed_low"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speed_low"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/btn_inactive"
+                app:checkedIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_speed_mid"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/speed_mid"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/btn_inactive"
+                app:checkedIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_speed_high"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speed_high"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/btn_inactive"
+                app:checkedIconVisible="false" />
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

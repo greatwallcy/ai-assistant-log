@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 820" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="wardWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8D5B8"/>
+      <stop offset="100%" stop-color="#D4BC96"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="425" y="35" text-anchor="middle" font-size="26" font-weight="bold" fill="#2C3E50">衣柜 · 内部布局设计</text>
+  <text x="425" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">以2400mm宽衣柜为例 · 深度≥550mm · 顶天立地</text>
+
+  <!-- Main Cabinet Frame -->
+  <rect x="60" y="80" width="720" height="600" rx="5" fill="#FAF3EB" stroke="#A0845C" stroke-width="3"/>
+
+  <!-- ====== Top: Quilt Storage (3 columns) ====== -->
+  <rect x="63" y="83" width="238" height="110" rx="2" fill="url(#wardWood)" stroke="#A0845C" stroke-width="1.5"/>
+  <text x="182" y="135" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">被褥区</text>
+  <text x="182" y="155" text-anchor="middle" font-size="10" fill="#A0764A">换季被褥 · H=400-500mm</text>
+  <!-- Blanket icon -->
+  <rect x="120" y="100" width="60" height="25" rx="3" fill="#A8C8E0" opacity="0.4"/>
+  <rect x="190" y="95" width="50" height="30" rx="3" fill="#D5E8D4" opacity="0.4"/>
+
+  <rect x="303" y="83" width="238" height="110" rx="2" fill="url(#wardWood)" stroke="#A0845C" stroke-width="1.5"/>
+  <text x="422" y="135" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">被褥区</text>
+  <text x="422" y="155" text-anchor="middle" font-size="10" fill="#A0764A">收纳箱 · H=400-500mm</text>
+
+  <rect x="543" y="83" width="235" height="110" rx="2" fill="url(#wardWood)" stroke="#A0845C" stroke-width="1.5"/>
+  <text x="660" y="135" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">被褥区</text>
+  <text x="660" y="155" text-anchor="middle" font-size="10" fill="#A0764A">换季被褥 · H=400-500mm</text>
+
+  <!-- ====== Middle: Hanging + Folding ====== -->
+  <!-- Left: Long clothes -->
+  <rect x="63" y="197" width="238" height="280" rx="2" fill="#FFF8F0" stroke="#C49455" stroke-width="1.5"/>
+  <line x1="120" y1="215" x2="120" y2="455" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="120" cy="215" r="5" fill="#C49455"/>
+  <!-- Coat 1 -->
+  <path d="M105,230 L120,218 L135,230 L140,400 L100,400 Z" fill="#E8B87A" stroke="#C49455" stroke-width="1" opacity="0.5"/>
+  <!-- Coat 2 -->
+  <path d="M165,225 L180,213 L195,225 L200,410 L160,410 Z" fill="#A8C8E0" stroke="#7BA8C8" stroke-width="1" opacity="0.5"/>
+  <!-- Coat 3 -->
+  <path d="M210,230 L225,218 L240,230 L245,395 L205,395 Z" fill="#D5E8D4" stroke="#8CB88A" stroke-width="1" opacity="0.5"/>
+  <line x1="180" y1="213" x2="180" y2="455" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="180" cy="213" r="5" fill="#C49455"/>
+  <line x1="225" y1="218" x2="225" y2="455" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="225" cy="218" r="5" fill="#C49455"/>
+
+  <text x="180" y="470" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">长衣区</text>
+  <text x="180" y="488" text-anchor="middle" font-size="10" fill="#A0764A">大衣/连衣裙</text>
+  <text x="180" y="503" text-anchor="middle" font-size="10" fill="#A0764A">H=1300-1500mm</text>
+
+  <!-- Center: Short clothes top + folding bottom -->
+  <rect x="303" y="197" width="238" height="195" rx="2" fill="#FFF8F0" stroke="#C49455" stroke-width="1.5"/>
+  <line x1="350" y1="215" x2="350" y2="375" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="350" cy="215" r="5" fill="#C49455"/>
+  <!-- Shirts -->
+  <path d="M335,230 L350,218 L365,230 L368,330 L332,330 Z" fill="#F5B041" stroke="#D4AC0D" stroke-width="1" opacity="0.5"/>
+  <line x1="422" y1="215" x2="422" y2="375" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="422" cy="215" r="5" fill="#C49455"/>
+  <path d="M407,230 L422,218 L437,230 L440,330 L404,330 Z" fill="#85C1E9" stroke="#5DADE2" stroke-width="1" opacity="0.5"/>
+  <line x1="494" y1="215" x2="494" y2="375" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="494" cy="215" r="5" fill="#C49455"/>
+  <path d="M479,230 L494,218 L509,230 L512,330 L476,330 Z" fill="#C39BD3" stroke="#A569BD" stroke-width="1" opacity="0.5"/>
+
+  <!-- Folding area below short clothes -->
+  <rect x="303" y="396" width="238" height="80" rx="2" fill="#FAF3EB" stroke="#C49455" stroke-width="1.5"/>
+  <!-- Folded items -->
+  <rect x="320" y="410" width="45" height="30" rx="2" fill="#E8D5B8" stroke="#C49455" stroke-width="1"/>
+  <rect x="370" y="408" width="45" height="32" rx="2" fill="#D5E8D4" stroke="#8CB88A" stroke-width="1"/>
+  <rect x="420" y="410" width="45" height="30" rx="2" fill="#D4C5E8" stroke="#9A88B8" stroke-width="1"/>
+  <rect x="470" y="408" width="45" height="32" rx="2" fill="#E8D4D4" stroke="#B88A8A" stroke-width="1"/>
+
+  <text x="422" y="465" text-anchor="middle" font-size="10" fill="#A0764A">叠放区（毛衣/卫衣/牛仔裤）</text>
+
+  <text x="422" y="490" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">短衣区</text>
+  <text x="422" y="508" text-anchor="middle" font-size="10" fill="#A0764A">衬衫/T恤/夹克</text>
+  <text x="422" y="523" text-anchor="middle" font-size="10" fill="#A0764A">H=900-1000mm</text>
+
+  <!-- Right: Short clothes top + folding bottom -->
+  <rect x="543" y="197" width="235" height="195" rx="2" fill="#FFF8F0" stroke="#C49455" stroke-width="1.5"/>
+  <line x1="580" y1="215" x2="580" y2="375" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="580" cy="215" r="5" fill="#C49455"/>
+  <path d="M565,230 L580,218 L595,230 L598,330 L562,330 Z" fill="#F1948A" stroke="#E74C3C" stroke-width="1" opacity="0.4"/>
+  <line x1="650" y1="215" x2="650" y2="375" stroke="#C49455" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="650" cy="215" r="5" fill="#C49455"/>
+  <path d="M635,230 L650,218 L665,230 L668,330 L632,330 Z" fill="#ABEBC6" stroke="#2ECC71" stroke-width="1" opacity="0.4"/>
+
+  <!-- Folding area -->
+  <rect x="543" y="396" width="235" height="80" rx="2" fill="#FAF3EB" stroke="#C49455" stroke-width="1.5"/>
+  <rect x="560" y="410" width="60" height="30" rx="2" fill="#FADBD8" stroke="#E74C3C" stroke-width="1"/>
+  <rect x="630" y="408" width="55" height="32" rx="2" fill="#D5F5E3" stroke="#2ECC71" stroke-width="1"/>
+  <rect x="695" y="410" width="50" height="30" rx="2" fill="#EBF5FB" stroke="#3498DB" stroke-width="1"/>
+  <text x="660" y="465" text-anchor="middle" font-size="10" fill="#A0764A">叠放区（运动服/家居服）</text>
+
+  <text x="660" y="490" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">短衣/裤区</text>
+  <text x="660" y="508" text-anchor="middle" font-size="10" fill="#A0764A">夹克/外套</text>
+  <text x="660" y="523" text-anchor="middle" font-size="10" fill="#A0764A">H=900-1000mm</text>
+
+  <!-- ====== Bottom: Drawers (3 groups) ====== -->
+  <rect x="63" y="540" width="238" height="137" rx="2" fill="#FAF3EB" stroke="#C49455" stroke-width="1.5"/>
+  <!-- Drawer 1 -->
+  <rect x="73" y="548" width="218" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="182" cy="567" r="3" fill="#A0845C"/>
+  <!-- Items -->
+  <rect x="85" y="555" width="20" height="20" rx="2" fill="#FADBD8" opacity="0.6"/>
+  <rect x="110" y="558" width="15" height="15" rx="2" fill="#EBF5FB" opacity="0.6"/>
+  <text x="182" y="563" text-anchor="middle" font-size="8" fill="#A0764A">内衣 · 袜子</text>
+  <!-- Drawer 2 -->
+  <rect x="73" y="590" width="218" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="182" cy="609" r="3" fill="#A0845C"/>
+  <text x="182" y="605" text-anchor="middle" font-size="8" fill="#A0764A">配饰 · 领带 · 手表</text>
+  <!-- Drawer 3 -->
+  <rect x="73" y="632" width="218" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="182" cy="651" r="3" fill="#A0845C"/>
+  <text x="182" y="647" text-anchor="middle" font-size="8" fill="#A0764A">家居服 · 睡衣</text>
+
+  <rect x="303" y="540" width="238" height="137" rx="2" fill="#FAF3EB" stroke="#C49455" stroke-width="1.5"/>
+  <rect x="313" y="548" width="218" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="422" cy="567" r="3" fill="#A0845C"/>
+  <text x="422" y="563" text-anchor="middle" font-size="8" fill="#A0764A">包包 · 帽子</text>
+  <rect x="313" y="590" width="218" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="422" cy="609" r="3" fill="#A0845C"/>
+  <text x="422" y="605" text-anchor="middle" font-size="8" fill="#A0764A">围巾 · 皮带</text>
+  <rect x="313" y="632" width="218" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="422" cy="651" r="3" fill="#A0845C"/>
+  <text x="422" y="647" text-anchor="middle" font-size="8" fill="#A0764A">过季小件</text>
+
+  <rect x="543" y="540" width="235" height="137" rx="2" fill="#FAF3EB" stroke="#C49455" stroke-width="1.5"/>
+  <rect x="553" y="548" width="215" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="660" cy="567" r="3" fill="#A0845C"/>
+  <text x="660" y="563" text-anchor="middle" font-size="8" fill="#A0764A">运动装备</text>
+  <rect x="553" y="590" width="215" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="660" cy="609" r="3" fill="#A0845C"/>
+  <text x="660" y="605" text-anchor="middle" font-size="8" fill="#A0764A">旅行收纳</text>
+  <rect x="553" y="632" width="215" height="38" rx="2" fill="#FFF" stroke="#C49455" stroke-width="1"/>
+  <circle cx="660" cy="651" r="3" fill="#A0845C"/>
+  <text x="660" y="647" text-anchor="middle" font-size="8" fill="#A0764A">备用床品</text>
+
+  <text x="420" y="695" text-anchor="middle" font-size="13" fill="#8B6338" font-weight="bold">抽屉组（外抽设计） · H=600-750mm</text>
+
+  <!-- LED strip indicators -->
+  <rect x="63" y="195" width="235" height="3" rx="1" fill="#F1C40F" opacity="0.8"/>
+  <rect x="303" y="195" width="235" height="3" rx="1" fill="#F1C40F" opacity="0.8"/>
+  <rect x="543" y="195" width="232" height="3" rx="1" fill="#F1C40F" opacity="0.8"/>
+  <text x="20" y="200" font-size="10" fill="#F39C12">💡灯带</text>
+
+  <!-- Zone annotation -->
+  <rect x="60" y="710" width="720" height="95" rx="5" fill="#FEF9E7" stroke="#F9E79F" stroke-width="1.5"/>
+  <text x="420" y="732" text-anchor="middle" font-size="14" font-weight="bold" fill="#7D6608">黄金分区原则</text>
+
+  <!-- Zone bars -->
+  <rect x="80" y="742" width="200" height="25" rx="3" fill="#E74C3C" opacity="0.15" stroke="#E74C3C" stroke-width="1"/>
+  <text x="180" y="760" text-anchor="middle" font-size="10" fill="#C0392B">🔴 高区：换季被褥（伸手以上）</text>
+
+  <rect x="300" y="742" width="200" height="25" rx="3" fill="#2ECC71" opacity="0.15" stroke="#2ECC71" stroke-width="1"/>
+  <text x="400" y="760" text-anchor="middle" font-size="10" fill="#1E8449">🟢 黄金区：当季常穿（眼睛到腰）</text>
+
+  <rect x="520" y="742" width="240" height="25" rx="3" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+  <text x="640" y="760" text-anchor="middle" font-size="10" fill="#2874A6">🔵 低区：抽屉+包包（膝盖以下）</text>
+
+  <text x="420" y="790" text-anchor="middle" font-size="11" fill="#7D6608">💡 建议挂放70% + 叠放30%（挂比叠省时间、衣服不皱）</text>
+</svg>

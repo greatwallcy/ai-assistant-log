@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WALL-E 遥控器</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
+    <string name="disconnected">未连接</string>
+    <string name="speed">速度</string>
+    <string name="speed_low">低速</string>
+    <string name="speed_mid">中速</string>
+    <string name="speed_high">高速</string>
+    <string name="buzzer">蜂鸣器</string>
+    <string name="eye_left">左眼</string>
+    <string name="eye_right">右眼</string>
+</resources>

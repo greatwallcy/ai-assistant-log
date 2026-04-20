@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_ic_bluetooth.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\ic_bluetooth.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_face_normal.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\face_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_lcd_frame.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\lcd_frame.xml"
+    },
+    {
+        "merged": "com.walle.robot.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.walle.robot.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_face_curious.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\face_curious.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_ic_buzzer.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\ic_buzzer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_face_happy.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\face_happy.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_ic_bluetooth_connected.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\ic_bluetooth_connected.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_face_careful.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\face_careful.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_btn_circle_bg.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\btn_circle_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-merged_res-31:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.5\\com.walle.robot.app-main-33:\\drawable\\ic_launcher.xml"
+    }
+]
